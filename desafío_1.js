@@ -1,3 +1,5 @@
+
+
 // REGISTRO DE USUARIO
 
                 // let user = prompt(`¿cual es tu nombre de usuario?`).toLowerCase().trim();
