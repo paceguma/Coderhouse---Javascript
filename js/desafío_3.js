@@ -21,7 +21,7 @@ const activities = [
         name: "cardio", // cardio local - lostweight
         timetable: ["09:00", "18:15", "19:15" ],
         days: ["monday", "wednesday", "friday"],
-        details: "details ",
+        details: "An interval based workout consisting of a series of short bursts of both cardio and resistance training. Achieve total body conditioning whilst also improving mobility, strength and stamina. ",
         professor: ["Natalia", "Eugenia"],
         calories: 700,
         duration: 45, 
@@ -30,7 +30,7 @@ const activities = [
         name: "power-stretching",
         timetable: ["08:00", "09:00", "16:15" ],
         days: ["monday", "tuesday", "wednesday", "thursday", "friday"],
-        details: "details ",
+        details: "Pilates improves flexibility, builds strength and develops control and endurance in the entire body. It puts emphasis on alignment, breathing, developing a strong core and improving coordination and balance. Our classes are suitable for beginner to advanced. ",
         professor: "Andrea",
         calories: 100,
         duration: 45, 
