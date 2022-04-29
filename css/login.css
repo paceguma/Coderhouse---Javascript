@@ -1,0 +1,146 @@
+.body {
+    background-image: url('../img/fondo.jpeg');
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.title {
+    color: white;
+    font-weight: 400;
+    font-size: 64px;
+    font-family: 'Helvetica';
+}
+
+.container {
+    background-color: #480D83;
+    display: flex;
+    margin-top: 100px;
+    width: 1200px;
+    height: 750px;
+    border-radius: 8px;
+
+}
+
+.containerImg {
+    width: 50%;
+    max-height: 750px;
+    background-image: url(../img/login.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.containerLogin {
+    width: 50%;
+    text-align: center;
+
+
+}
+
+.login-register {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.login {
+    border: none;
+    background-color: transparent;
+
+}
+
+.login a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.register {
+    border: none;
+    background-color: transparent;
+
+}
+
+.register a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.register a:hover {
+    text-decoration: none;
+    color: #03c1ab;
+    font-size: 24px;
+    transition: all ease-in .2s;
+}
+
+.login a:hover {
+    text-decoration: none;
+    color: #03c1ab;
+    font-size: 24px;
+    transition: all ease-in .2s;
+}
+
+.containerInput input {
+    width: 320px;
+    height: 40px;
+    margin-top: 10px;
+    color: white;
+    background-color: #480D83;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.containerInput input::placeholder {
+    padding-left: 10px;
+    margin-left: 50px;
+    color: white;
+    font-size: 16px;
+}
+
+
+
+.containerInput .color {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.containerCheckbox {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.containerCheckbox label {
+    color: white;
+    font-family: 'Helvetica';
+
+}
+
+.containerCheckbox a {
+    color: #03c1ab;
+    text-decoration: none;
+    font-family: 'Helvetica';
+
+}
+
+.btn {
+    width: 169px;
+    height: 66px;
+    background: linear-gradient(50deg, #03C1AB, #480D83);
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+
+.btn:hover {
+    transition: all ease-in .2s;
+    background: linear-gradient(10deg, #03C1AB, #480D83);
+}
