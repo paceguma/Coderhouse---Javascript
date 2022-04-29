@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c76c7f2890.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
 </head>
-<body>
-    
-    <h1>Crear cuenta</h1>
-    <input id="nombreRegistro" type="text" placeholder="Name" />
-    <input id="emailRegistro" type="email" placeholder="Email" />
-    <input id="contraseñaRegistro" type="password" placeholder="Password" />
-    <button onclick="registrarUsuario(nombreRegistro.value, emailRegistro.value, contraseñaRegistro.value)">
-         <a >Registrarse</a>
-    </button>
-    <button><a href="./login.html">Ir al Login</a></button>
+
+<body class="body">
+
+
+    <div class="container">
+        <div class="containerImg">
+
+        </div>
+        <div class="containerLogin">
+            <h2 class="title">Registro</h2>
+            <div class="login-register">
+
+                <button class="login"><a href="./login.html">SIGN IN</a></button>
+                <button class="register"><a href="./registro.html">REGISTER</a></button>
+            </div>
+            <div>
+                <div class="containerInput">
+                    <i class="fa-solid color fa-user"></i>
+                    <input id="nombreRegistro" type="text" placeholder="Name" />
+
+                </div>
+
+                <div class="containerInput">
+                    <i class="far color fa-envelope"></i>
+
+                    <input id="emailRegistro" type="email" placeholder="Email" />
+
+                </div>
+
+                <div class="containerInput">
+
+                    <i class="fa-solid color fa-lock"></i>
+                    <input id="contraseñaRegistro" type="password" placeholder="Password" />
+
+                </div>
+
+            </div>
+
+            <div class="containerCheckbox">
+
+                <div>
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <label for="">Remember me</label>
+                </div>
+                <a href="#">I forgot my pass</a>
+            </div>
+
+            <button class="btn"
+                onclick="registrarUsuario(nombreRegistro.value, emailRegistro.value, contraseñaRegistro.value)">Registrarse</button>
+
+
+        </div>
+
+    </div>
+
 </body>
 <script src="../js/main.js"></script>
+
 </html>

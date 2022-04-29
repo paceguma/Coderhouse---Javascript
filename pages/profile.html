@@ -16,8 +16,10 @@
                 <h3>TURNOS</h3>
             </div>
             <div class="configProfile">
-                <button class="profileButtons">CONFIGURACION</button>
-                <button class="profileButtons" onclick="localStorage.clear(); alert('Usuario desconectado'); location.href='registro.html';" >SALIR </button>
+                <a href="./index.html" class="profileButtons">HOME</a>
+                <button class="profileButtons"
+                    onclick="localStorage.clear(); alert('Usuario desconectado'); location.href='registro.html';">SALIR
+                </button>
             </div>
         </nav>
     </header>
@@ -52,129 +54,34 @@
 
         </div>
         <div class="activePass">
-            <p>Pase Activo:</p>
-            <p>57</p>
-            <h3>Creditos Disponibles</h3>
-            <h3>DISPONIBLE HASTA: <span>24/5/2022</span></h3>
-            
-            <button>AGREGAR</button>
+            <p>Active pass</p>
+            <h2>57</h2>
+            <h2>FREE PASS</h2>
+            <h3>Credits available</h3>
+            <h3>Available to date: <span>24/5/2022</span></h3>
+            <button>My credits</button>
+            <button>History</button>
+            <button>+</button>
         </div>
     </section>
 
-
-    <section class="calendar">
-       
-        <table  
-        cellspacing="21" cellpadding="21">
-          
-        <!-- The tr tag is used to enter 
-            rows in the table -->
-  
-        <!-- It is used to give the heading to the
-            table. We can give the heading to the 
-            top and bottom of the table -->
-  
-        <caption align="top">
-            <!-- Here we have used the attribute 
-                that is style and we have colored 
-                the sentence to make it better 
-                depending on the web page-->
-        </caption>
-  
-        <!-- Here th stands for the heading of the
-            table that comes in the first row-->
-  
-        <!-- The text in this table header tag will 
-            appear as bold and is center aligned-->
-           
-        <thead>
-            <tr>
-                <!-- Here we have applied inline style 
-                     to make it more attractive-->
-              
-                <th>Lunes</th>
-                <th>Martes</th>
-                <th>Miercoles</th>
-                <th>Jueves</th>
-                <th>Viernes</th>
-               
-            </tr>
-        </thead>
-        
-        <tbody>
-            
-               
-        
-            
-            <tr>
-                <td id="1"></td>
-                <td id="2"></td>
-                <td id="3"></td>
-                <td id="4"></td>
-                <td id="5"></td>
-               
-            </tr>
-            
-            <tr>
-                <td id="6"></td>
-                <td id="7"></td>
-                <td id="8"></td>
-                <td id="9"></td>
-                <td id="10"></td>
-             
-            </tr>
-            <tr>
-                <td id="11"></td>
-                <td id="12"></td>
-                <td id="13"></td>
-                <td id="14"></td>
-                <td id="15"></td>
-            
-            </tr>
-            <tr>
-                <td id="16"></td>
-                <td id="17"></td>
-                <td id="18"></td>
-                <td id="19"></td>
-                <td id="20"></td>
-               
-            </tr>
-            <tr>
-                <td id="21"></td>
-                <td id="22"></td>
-                <td id="23"></td>
-                <td id="24"></td>
-                <td id="25"></td>
-              
-            </tr>
-            <tr>
-                <td id="26"></td>
-                <td id="27"></td>
-                <td id="28"></td>
-                <td id="29"></td>
-                <td id="30"></td>
-               
-            </tr>
-            
-        </tbody>
-       
-    </table>
-  
+<section>
+    <h2>activities in progress</h2>
     <div class="actividades">
         <h2>Actividades</h2>
         <div class="actividadesContainer">
             <div class="cardsActivities">
                 <div class="dateActivities">
-                     <h2>Lun </h2>
-                <span>28</span>
+                    <h2>Lun </h2>
+                    <span>28</span>
                 </div>
-               
+
                 <div class="cardsActivitiesDetails">
-                     <p>Zumba</p>
-                    <p>15:15</p> 
-                   
+                    <p>Zumba</p>
+                    <p>15:15</p>
+
                 </div>
-              
+
                 <span class="x">X</span>
             </div>
             <div class="cardsActivitiesEmpty"></div>
@@ -182,7 +89,105 @@
             <div class="cardsActivitiesEmpty"></div>
         </div>
     </div>
-   
+</section>
+
+    <section class="calendar">
+
+<h2>Class timetable</h2>
+        <table cellspacing="21" cellpadding="21">
+
+            <!-- The tr tag is used to enter 
+            rows in the table -->
+
+            <!-- It is used to give the heading to the
+            table. We can give the heading to the 
+            top and bottom of the table -->
+
+            <caption align="top">
+                <!-- Here we have used the attribute 
+                that is style and we have colored 
+                the sentence to make it better 
+                depending on the web page-->
+            </caption>
+
+            <!-- Here th stands for the heading of the
+            table that comes in the first row-->
+
+            <!-- The text in this table header tag will 
+            appear as bold and is center aligned-->
+
+            <thead>
+                <tr>
+                    <!-- Here we have applied inline style 
+                     to make it more attractive-->
+
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td id="1"></td>
+                    <td id="2"></td>
+                    <td id="3"></td>
+                    <td id="4"></td>
+                    <td id="5"></td>
+
+                </tr>
+
+                <tr>
+                    <td id="6"></td>
+                    <td id="7"></td>
+                    <td id="8"></td>
+                    <td id="9"></td>
+                    <td id="10"></td>
+
+                </tr>
+                <tr>
+                    <td id="11"></td>
+                    <td id="12"></td>
+                    <td id="13"></td>
+                    <td id="14"></td>
+                    <td id="15"></td>
+
+                </tr>
+                <tr>
+                    <td id="16"></td>
+                    <td id="17"></td>
+                    <td id="18"></td>
+                    <td id="19"></td>
+                    <td id="20"></td>
+
+                </tr>
+                <tr>
+                    <td id="22"></td>
+                    <td id="23"></td>
+                    <td id="24"></td>
+                    <td id="21"></td>
+                    <td id="25"></td>
+
+                </tr>
+                <tr>
+                    <td id="26"></td>
+                    <td id="27"></td>
+                    <td id="28"></td>
+                    <td id="29"></td>
+                    <td id="30"></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+
     </section>
     <button class="calendarButton">Reservar</button>
 
@@ -202,15 +207,21 @@
             </div>
 
             <div class="categoriesGrafica" id="categorias">
-              
+
             </div>
         </div>
 
         <div class="divsCategorias">
-            <h3>Nuestras clases</h3>
-            <div class="categoriasCards"><h3>ZUMBA</h3></div>
-            <div class="categoriasCards"><h3>YOGA</h3></div>
-            <div class="categoriasCards"><h3>GAP</h3></div>
+            <h3>Our classes</h3>
+            <div class="categoriasCards">
+                <h3>Zumba</h3>
+            </div>
+            <div class="categoriasCards">
+                <h3>Yoga</h3>
+            </div>
+            <div class="categoriasCards">
+                <h3>Gap</h3>
+            </div>
             <button class="buttonVerMas">V</button>
         </div>
     </section>
