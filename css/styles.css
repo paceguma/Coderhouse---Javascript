@@ -11,33 +11,33 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-* {
   margin: 0;
   font-family: monospace;
 }
+
+
+
 body {
   background-color: var(--backGroundColor);
-  margin: 0 300px;
 }
+
 /* HEADER SECTION */
 
 .header {
   background-color: var(--backGroundColor);
-  height: 150px;
+  height: 70px;
 }
 
 .navBar {
   color: var(--wordsColors);
   display: flex;
   justify-content: space-between;
-  padding-bottom: 0%;
-  padding-top: 70px;
-  }
+
+  padding: 2rem 2rem;
+
+}
 
 .divLogo {
-  width: 20%;
-  padding-left: 0px;
   font-size: 2.4rem;
 }
 
@@ -45,20 +45,26 @@ body {
   display: flex;
   width: 40%;
 }
+
 .divListNav a {
   padding-right: 3rem;
   font-size: 1.4rem;
   text-decoration: none;
   color: var(--wordsColors);
 }
+
 .divButtonLogin {
-  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
 }
 
 .divButtonLogin button {
- padding-left: 5%;}
+  padding-left: 5%;
+}
 
 /* BUTTONS LOG/REGISTER */
+
 
 .buttonLogin {
   border: none;
@@ -67,6 +73,27 @@ body {
   font-size: 1.3rem;
   cursor: pointer;
 }
+
+.buttonLogin a {
+  text-decoration: none;
+  color: white;
+}
+
+.buttonLogin a:hover {
+  text-decoration: none;
+  color: var(--turquoiseColor);
+}
+
+.buttonRegister a {
+  text-decoration: none;
+  color: white;
+}
+
+.buttonRegister a:hover {
+  text-decoration: none;
+  color: var(--turquoiseColor);
+}
+
 .buttonRegister {
   border: none;
   background-color: var(--violetColor);
@@ -75,52 +102,94 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
 /* MAIN SECTION */
 
 .mainSection {
   color: var(--wordsColors);
   text-align: center;
   padding-top: 100px;
+  background-image: url(../img/index.jpeg);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 30%, rgba(0, 0, 0, 0.438) 84%, rgba(0, 0, 0, 0.199) 100%), url(../img/index.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
 }
 
 /** ACTIVITIES SECTION **/
-
-.activities {
-  max-width: 1400px;
-}
-.activities h3 {
-  color: var(--wordsColors);
-  font-size: 2rem;
-  text-align: center;
-  padding-top: 100px;
-}
-
 .activitiesContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
   justify-content: center;
+  margin-left: 10%;
   margin-top: 40px;
+
 }
 
 .cardsActivities {
   color: var(--wordsColors);
+  border: 1px solid var(--turquoiseColor);
+  width: 510px;
+  border-radius: 10px;
+  display: flex;
+  height: 420px;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.cardsActivities:hover {
   background-color: var(--turquoiseColor);
-  width: 25rem;
-  height: 25rem;
-  margin-left: 2rem;
-  
+  transition: all ease-in-out .5s;
+
 }
 
 .divImg {
-  width: 5rem;
+  width: 230px;
+  height: 400px;
+
 }
 
-.divDetails {
+.imgCardPower {
+  width: 270px;
+  height: 400px;
+}
+
+.imgCard {
+  width: 300px;
+  height: 400px;
+}
+
+
+
+.activities h3 {
+  color: var(--wordsColors);
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.divActivitiesDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.divActivitiesDetails {
   text-align: center;
 }
-.divDetails h4 {
-  font-size: 1.3rem;
+
+.divActivitiesDetails h4 {
+  font-size: 1.7rem;
 }
-.divDetails button {
+
+.divActivitiesDetails p {
+  font-size: 14px
+}
+
+.divActivitiesDetails button {
   margin: 10px;
   border: none;
   background-color: var(--violetColor);
@@ -129,12 +198,32 @@ body {
   border-radius: 5px;
 }
 
+.banner {
+  height: 300px;
+  width: 100%;
+}
+
 /* PRICES SECTION */
+.sectionCardPrices {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.sectionCardPrices h4 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10rem;
+}
+
+.cardPricesContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem;
+}
 
 .pricePasses {
-  max-width: 1200px;
+
   text-align: center;
-  margin-top: 100px;
   font-size: 2rem;
   color: var(--wordsColors);
 }
@@ -149,12 +238,20 @@ body {
 .cardsPrices {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
   border: 1px solid var(--turquoiseColor);
   width: 260px;
-  height: 380px;
+  height: 500px;
   color: var(--wordsColors);
   font-size: 2rem;
   border-radius: 25px;
+}
+
+.cardsPrices:hover {
+  background-color: var(--violetColor);
+  border: 1px solid var(--violetColor);
+  transition: all .5s;
 }
 
 .freePass {
@@ -191,16 +288,19 @@ footer {
   color: var(--wordsColors);
   max-width: 1400px;
 }
+
 .turnos h3 {
   letter-spacing: 1px;
   margin-left: 3.7rem;
 }
+
 .profileButtons {
   border: none;
   background-color: var(--backGroundColor);
   font-size: 1.2rem;
   color: var(--wordsColors);
 }
+
 .configProfile {
   margin-right: 3rem;
 }
@@ -212,9 +312,11 @@ footer {
   height: 350px;
   color: var(--wordsColors);
 }
+
 .containerStats {
   width: 600px;
 }
+
 .divSpanVencimiento {
   height: 50px;
   background-color: var(--violetColor);
@@ -224,13 +326,16 @@ footer {
   padding: 1rem;
   display: flex;
 }
+
 .divBienvenida {
   padding-top: 2rem;
   padding-bottom: 3rem;
 }
+
 .divBienvenida h3 {
   font-size: 3rem;
 }
+
 .divBienvenida p {
   font-size: 1.8rem;
 }
@@ -255,6 +360,7 @@ footer {
   justify-content: space-between;
   padding: 1.5rem;
 }
+
 .redCircle {
   width: 30px;
   height: 30px;
@@ -287,6 +393,7 @@ button {
   margin-bottom: 2rem;
   font-size: 1.7rem;
 }
+
 .activePass button {
   background-color: var(--turquoiseColor);
   border: none;
@@ -298,28 +405,33 @@ button {
 
 /** CALENDAR SECTION **/
 .calendar {
-  margin-left: 2rem;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 2rem;
   display: flex;
-  margin-top: 100px;
+
   background-color: #25252e;
-  max-width: 1000px;
+
   border-radius: 15px;
-  height: 800px;
+
 }
 
 table th {
   color: var(--wordsColors);
 }
+
 tr {
   font-size: 1.2rem;
 }
+
 td {
   background-color: var(--wordsColors);
   width: 100px;
   height: 60px;
   border-radius: 15px;
 }
+
 .calendarButton {
   background-color: var(--turquoiseColor);
   border: none;
@@ -342,16 +454,6 @@ td {
   align-items: center;
 }
 
-.cardsActivities {
-  background-color: var(--turquoiseColor);
-  width: 140px;
-  margin-top: 40px;
-  border-radius: 10px;
-  display: flex;
-  padding: 1rem;
-  height: 60px;
-  position: relative;
-}
 
 .cardsActivitiesDetails {
   justify-content: space-around;
@@ -390,15 +492,19 @@ td {
   width: 100%;
   justify-content: space-evenly;
 }
+
+
+
 .divGrafica {
-  height: 320px;
-  width: 35%;
+  height: 420px;
+  width: 25%;
   border-radius: 25px;
   background-color: #25252e;
   align-content: center;
   display: flex;
   flex-direction: column;
 }
+
 .divTitles {
   display: flex;
   justify-content: space-between;
@@ -407,6 +513,7 @@ td {
   color: var(--wordsColors);
   align-content: center;
 }
+
 .whiteCircle {
   width: 150px;
   height: 150px;
@@ -414,11 +521,12 @@ td {
   border-radius: 50%;
   align-self: center;
 }
+
 .categoriesGrafica {
   text-align: center;
   align-self: center;
   width: 200px;
-  height: 100px;
+
   color: white;
   margin-top: 20px;
   line-height: 15px;

@@ -1,235 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>GymNess</title>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="profileContainer">
-            <div class="turnos">
-                <h3>TURNOS</h3>
-            </div>
-            <div class="configProfile">
-                <a href="./index.html" class="profileButtons">HOME</a>
-                <button class="profileButtons"
-                    onclick="localStorage.clear(); alert('Usuario desconectado'); location.href='registro.html';">SALIR
-                </button>
-            </div>
-        </nav>
+      <nav class="profileContainer">
+        <div class="turnos">
+          <h3>TURNOS</h3>
+        </div>
+        <div class="configProfile">
+          <a href="./index.html" class="profileButtons">HOME</a>
+          <button
+            class="profileButtons"
+            onclick="localStorage.clear(); alert('Usuario desconectado'); location.href='registro.html';"
+          >
+            SALIR
+          </button>
+        </div>
+      </nav>
     </header>
 
     <section class="sectionContainerProfile">
-        <div class="containerStats">
-            <div class="divSpanVencimiento">
-                <span>Proximo Vencimiento entre el: 24/5/2022</span>
-                <span>X</span>
-            </div>
-            <div class="divBienvenida">
-                <h3 id="bienvenidaH3"></h3>
-                <p>You can with everything </p>
-            </div>
-
-            <div class="buttonsContainerStats">
-                <button>Weekly Stats</button>
-                <button>Total Time</button>
-                <button>Today</button>
-            </div>
-            <div class="divCircles">
-                <div class="containerCircles">
-                    <div class="redCircle"></div>
-                    <p>2.154 KCAL BURNT</p>
-                </div>
-                <div class="containerCircles">
-                    <div class="redCircle"></div>
-                    <p>TIME </p>
-                    <p>45 MIN</p>
-                </div>
-            </div>
-
+      <div class="containerStats">
+        <div class="divSpanVencimiento">
+          <span>Proximo Vencimiento entre el: 24/5/2022</span>
+          <span>X</span>
         </div>
-        <div class="activePass">
-            <p>Active pass</p>
-            <h2>57</h2>
-            <h2>FREE PASS</h2>
-            <h3>Credits available</h3>
-            <h3>Available to date: <span>24/5/2022</span></h3>
-            <button>My credits</button>
-            <button>History</button>
-            <button>+</button>
+        <div class="divBienvenida">
+          <h3 id="bienvenidaH3"></h3>
+          <p>You can with everything</p>
         </div>
+
+        <div class="buttonsContainerStats">
+          <button>Weekly Stats</button>
+          <button>Total Time</button>
+          <button>Today</button>
+        </div>
+        <div class="divCircles">
+          <div class="containerCircles">
+            <div class="redCircle"></div>
+            <p>2.154 KCAL BURNT</p>
+          </div>
+          <div class="containerCircles">
+            <div class="redCircle"></div>
+            <p>TIME</p>
+            <p>45 MIN</p>
+          </div>
+        </div>
+      </div>
+      <div class="activePass">
+        <p>Active pass</p>
+        <h2>57</h2>
+        <h2>FREE PASS</h2>
+        <h3>Credits available</h3>
+        <h3>Available to date: <span>24/5/2022</span></h3>
+        <button>My credits</button>
+        <button>History</button>
+        <button>+</button>
+      </div>
     </section>
 
     <section>
-        <h2>activities in progress</h2>
-        <div class="actividades">
-            <h2>Actividades</h2>
-            <div class="actividadesContainer">
-                <div class="cardsActivities">
-                    <div class="dateActivities">
-                        <h2>Lun </h2>
-                        <span>28</span>
-                    </div>
-
-                    <div class="cardsActivitiesDetails">
-                        <p>Zumba</p>
-                        <p>15:15</p>
-
-                    </div>
-
-                    <span class="x">X</span>
-                </div>
-                <div class="cardsActivitiesEmpty"></div>
-                <div class="cardsActivitiesEmpty"></div>
-                <div class="cardsActivitiesEmpty"></div>
+      <h2>activities in progress</h2>
+      <div class="actividades">
+        <h2>Actividades</h2>
+        <div class="actividadesContainer">
+          <div>
+            <div class="dateActivities">
+              <h2>Lun</h2>
+              <span>28</span>
             </div>
+
+            <div class="cardsActivitiesDetails">
+              <p>Zumba</p>
+              <p>15:15</p>
+            </div>
+
+            <span class="x">X</span>
+          </div>
+          <div class="cardsActivitiesEmpty"></div>
+          <div class="cardsActivitiesEmpty"></div>
+          <div class="cardsActivitiesEmpty"></div>
         </div>
+      </div>
     </section>
 
     <section class="calendar">
+      <h2>Class timetable</h2>
+      <table cellspacing="21" cellpadding="21">
+        <!-- The tr tag is used to enter rows in the table -->
+        <!-- It is used to give the heading to the table. We can give the heading to the top and bottom of the table -->
 
-        <h2>Class timetable</h2>
-        <table cellspacing="21" cellpadding="21">
+        <caption align="top">
+          <!-- Here we have used the attribute that is style and we have colored the sentence to make it better depending on the web page-->
+        </caption>
 
-            <!-- The tr tag is used to enter rows in the table -->
-            <!-- It is used to give the heading to the table. We can give the heading to the top and bottom of the table -->
+        <!-- Here th stands for the heading of the table that comes in the first row-->
+        <!-- The text in this table header tag will appear as bold and is center aligned-->
 
-            <caption align="top">
-                <!-- Here we have used the attribute that is style and we have colored the sentence to make it better depending on the web page-->
-            </caption>
+        <thead>
+          <tr>
+            <!-- Here we have applied inline style to make it more attractive-->
 
-            <!-- Here th stands for the heading of the table that comes in the first row-->
-            <!-- The text in this table header tag will appear as bold and is center aligned-->
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </thead>
 
-            <thead>
-                <tr>
-                    <!-- Here we have applied inline style to make it more attractive-->
+        <tbody class="calendarTimetable">
+          <tr>
+            <td id="1">Power- stretching</td>
+            <td id="2">Power- stretching</td>
+            <td id="3">Power- stretching</td>
+            <td id="4">Abs</td>
+            <td id="5">Power- stretching</td>
+          </tr>
 
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-
-                </tr>
-            </thead>
-
-            <tbody class="calendarTimetable">
-
-                <tr>
-                    <td id="1">Power- stretching</td>
-                    <td id="2">Power- stretching</td>
-                    <td id="3">Power- stretching</td>
-                    <td id="4">Abs</td>
-                    <td id="5">Power- stretching</td>
-
-                </tr>
-
-                <tr>
-                    <td id="6">Abs</td>
-                    <td id="7">Step</td>
-                    <td id="8">Abs</td>
-                    <td id="9">Step</td>
-                    <td id="10">Step</td>
-
-                </tr>
-                <tr>
-                    <td id="11"></td>
-                    <td id="12"></td>
-                    <td id="13"></td>
-                    <td id="14">Power-stretching</td>
-                    <td id="15">Abs</td>
-
-                </tr>
-                <tr>
-                    <td id="16"></td>
-                    <td id="17">Power-stretching</td>
-                    <td id="18"></td>
-                    <td id="19">Power-stretching</td>
-                    <td id="20"></td>
-                </tr>
-                <tr>
-                    <td id="21">Step</td>
-                    <td id="22">Abs</td>
-                    <td id="23">Step</td>
-                    <td id="24">Abs</td>
-                    <td id="25">Abs</td>
-
-                </tr>
-                <tr>
-                    <td id="26"> Zumba</td>
-                    <td id="27"> Step</td>
-                    <td id="28">Zumba</td>
-                    <td id="29">Aerobox</td>
-                    <td id="30">Zumba</td>
-
-                </tr>
-                <tr>
-                    <td id="31"> Cardio</td>
-                    <td id="32"> Zumba</td>
-                    <td id="33">Aerobox</td>
-                    <td id="34">Cardio</td>
-                    <td id="35">Aerobox</td>
-
-                </tr>
-                <tr>
-                    <td id="36"> Aerobox</td>
-                    <td id="37"> Cardio</td>
-                    <td id="38"></td>
-                    <td id="39">Zumba</td>
-                    <td id="40">Cardio</td>
-
-                </tr>
-            </tbody>
-
-        </table>
-
-
-
+          <tr>
+            <td id="6">Abs</td>
+            <td id="7">Step</td>
+            <td id="8">Abs</td>
+            <td id="9">Step</td>
+            <td id="10">Step</td>
+          </tr>
+          <tr>
+            <td id="11"></td>
+            <td id="12"></td>
+            <td id="13"></td>
+            <td id="14">Power-stretching</td>
+            <td id="15">Abs</td>
+          </tr>
+          <tr>
+            <td id="16"></td>
+            <td id="17">Power-stretching</td>
+            <td id="18"></td>
+            <td id="19">Power-stretching</td>
+            <td id="20"></td>
+          </tr>
+          <tr>
+            <td id="21">Step</td>
+            <td id="22">Abs</td>
+            <td id="23">Step</td>
+            <td id="24">Abs</td>
+            <td id="25">Abs</td>
+          </tr>
+          <tr>
+            <td id="26">Zumba</td>
+            <td id="27">Step</td>
+            <td id="28">Zumba</td>
+            <td id="29">Aerobox</td>
+            <td id="30">Zumba</td>
+          </tr>
+          <tr>
+            <td id="31">Cardio</td>
+            <td id="32">Zumba</td>
+            <td id="33">Aerobox</td>
+            <td id="34">Cardio</td>
+            <td id="35">Aerobox</td>
+          </tr>
+          <tr>
+            <td id="36">Aerobox</td>
+            <td id="37">Cardio</td>
+            <td id="38"></td>
+            <td id="39">Zumba</td>
+            <td id="40">Cardio</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
-    <button class="calendarButton">Reservar</button>
-
-
 
     <section class="sectionGrafica">
-        <div class="divGrafica">
-            <div class="divTitles">
-                <p>ACTIVIDAD REALIZADA</p>
-                <p>PERIODO</p>
-            </div>
+      <div class="divGrafica">
+        <canvas id="myChart" width="100" height="100"></canvas>
+      </div>
 
-            <div class="whiteCircle">
-                <div class="blackCircle">
-
-                </div>
-            </div>
-
-            <div class="categoriesGrafica" id="categorias">
-
-            </div>
+      <div class="divsCategorias">
+        <h3>Our classes</h3>
+        <div class="categoriasCards">
+          <h3>Zumba</h3>
         </div>
-
-        <div class="divsCategorias">
-            <h3>Our classes</h3>
-            <div class="categoriasCards">
-                <h3>Zumba</h3>
-            </div>
-            <div class="categoriasCards">
-                <h3>Yoga</h3>
-            </div>
-            <div class="categoriasCards">
-                <h3>Gap</h3>
-            </div>
-            <button class="buttonVerMas">V</button>
+        <div class="categoriasCards">
+          <h3>Yoga</h3>
         </div>
+        <div class="categoriasCards">
+          <h3>Gap</h3>
+        </div>
+        <button class="buttonVerMas">V</button>
+      </div>
     </section>
 
     <script src="../js/main.js"></script>
-</body>
-
+  </body>
+  <script>
+    const ctx = document.getElementById("myChart").getContext("2d");
+    const myChart = new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: ["Zumba", "Cardio", "Step", "Power-stretching", "Abs", "Step"],
+        datasets: [
+          {
+            label: "Clases Hechas",
+            data: [300, 50, 100, 35, 70,90],
+            backgroundColor: [
+              "rgb(255, 99, 132)",
+              "rgb(54, 162, 235)",
+              "rgb(255, 120, 86)",
+              "rgb(108, 2, 54)",
+              "rgb(150, 40, 5)",
+              "rgb(170, 130, 20)",
+            ],
+            hoverOffset: 2,
+          },
+        ],
+      },
+      options: {
+        radius: 110,
+      },
+    });
+  </script>
 </html>
