@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Helvetica Compressed";
   src: url("../fonts/helveticaComp.ttf"),
-  local("helveticaComp"),
-  format("truetype");
+    local("helveticaComp"),
+    format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -410,87 +410,89 @@ hr {
 
 
 /** CALENDAR SECTION **/
-                                        .calendar-title{
-                                          height: 300px;
-                                          display: flex;
-                                          flex-direction: column;
-                                          justify-content: center;
+.calendar-title {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-                                        }
+}
 
-                                        .calendar-h3{
-                                            color: var(--wordsColors);
-                                            text-align: center;
-                                            text-transform: uppercase;
-                                            font-size: 58px;
-                                            letter-spacing: 1rem;
-                                          }
+.calendar-h3 {
+  color: var(--wordsColors);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 58px;
+  letter-spacing: 1rem;
+}
 
-                                          .calendar-h4{
-                                            color: var(--wordsColors);
-                                            text-align: center;
-                                            text-transform: uppercase;
-                                            font-size: 18px;
-                                            font-family: helvetica;
-                                            letter-spacing: .1rem;;
-                                          }
+.calendar-h4 {
+  color: var(--wordsColors);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: helvetica;
+  letter-spacing: .1rem;
+  ;
+}
 
-                                            .calendar-timetable{
-                                                                                     display: flex;
-                                             flex-direction: column;
-                                             justify-content: center;
-                                             align-items: center;
-                                            }
+.calendar-timetable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-                                                  .calendar-days{
-                                                  display: flex;
-                                                  
-                                                  }
+.calendar-days {
+  display: flex;
 
-                                                  .calendar-days-background{
-                                                    width: 350px;
-                                                    height: 30px;
-                                                    /* background-color: var(--redOrangeColor); */
-                                                    margin-right: 25px;
-                                                  }
-                                                
-                                                  .calendar-week-days{
-                                                    display: flex; 
-                                                    margin-right: 8px;
+}
 
+.calendar-days-background {
+  width: 350px;
+  height: 30px;
+  /* background-color: var(--redOrangeColor); */
+  margin-right: 25px;
+}
 
-                                                  }
-
-                                                  .calendar-week-days p{
-                                                    text-transform: uppercase;
-                                                  letter-spacing: .2rem;
-                                                  font-size: 24px;
-                                                  color: var(--wordsColors);
-                                                  }
-
-                                                  .calendar-activities{
-                                                    display: flex; 
-                                                    }
-  .gym-days{
-    width: 190px;
-    height: 30px;
-    /* border: 1px solid yellow; */
-    text-align: center;
-    margin: 8px 16px 8px 0;
-  }
+.calendar-week-days {
+  display: flex;
+  margin-right: 8px;
 
 
-  .calendar-hours{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-   
+}
 
-  }
+.calendar-week-days p {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 24px;
+  color: var(--wordsColors);
+}
+
+.calendar-activities {
+  display: flex;
+}
+
+.gym-days {
+  width: 190px;
+  height: 30px;
+  /* border: 1px solid yellow; */
+  text-align: center;
+  margin: 8px 16px 8px 0;
+}
 
 
-.calendar-morning{
-  width:230px;
+.calendar-hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+
+.calendar-morning {
+  width: 230px;
   /* border: 1px solid #df3838; */
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -503,8 +505,8 @@ hr {
   margin-top: 8px;
 }
 
-.calendar-afternoon{
-  width:230px;
+.calendar-afternoon {
+  width: 230px;
   /* border: 1px solid #df3838; */
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -518,7 +520,7 @@ hr {
 
 }
 
-.gym-hour{
+.gym-hour {
   width: 120px;
   height: 50px;
   /* border: 1px solid #df3838; */
@@ -534,7 +536,7 @@ hr {
 
 
 
-.gym-class{
+.gym-class {
   width: 190px;
   height: 50px;
   /* border: .02px solid var(--turquoiseColor); */
@@ -547,51 +549,51 @@ hr {
   margin: 8px 16px 8px 0;
 }
 
-.container{
+.container {
   display: flex;
 }
 
-.div-space{
+.div-space {
   height: 30px;
   /* border: 1px solid #df3838; */
 }
 
-.rectangule-power-stretching{
+.rectangule-power-stretching {
   width: 15px;
   height: 50px;
   background-color: var(--violetColor);
   margin-right: 8px;
 }
 
-.rectangule-abs{
+.rectangule-abs {
   width: 15px;
   height: 50px;
   background-color: var(--redOrangeColor);
   margin-right: 8px;
 }
 
-.rectangule-zumba{
+.rectangule-zumba {
   width: 15px;
   height: 50px;
   background-color: var(--turquoiseColor);
   margin-right: 8px;
 }
 
-.rectangule-cardio{
+.rectangule-cardio {
   width: 15px;
   height: 50px;
   background-color: var(--greyColor);
   margin-right: 8px;
 }
 
-.rectangule-aerobox{
+.rectangule-aerobox {
   width: 15px;
   height: 50px;
   background-color: var(--greenColor);
   margin-right: 8px;
 }
 
-.rectangule-step{
+.rectangule-step {
   width: 15px;
   height: 50px;
   background-color: var(--pinkColor);
@@ -599,27 +601,27 @@ hr {
 }
 
 
-.border-cardio{
+.border-cardio {
   border: 1px solid var(--greyColor);
 }
 
-.border-aerobox{
+.border-aerobox {
   border: 1px solid var(--greenColor);
 }
 
-.border-zumba{
+.border-zumba {
   border: 1px solid var(--turquoiseColor);
 }
 
-.border-power-stretching{
+.border-power-stretching {
   border: 1px solid var(--violetColor);
 }
 
-.border-abs{
+.border-abs {
   border: 1px solid var(--redOrangeColor);
 }
 
-.border-step{
+.border-step {
   border: 1px solid var(--pinkColor);
 }
 
@@ -627,8 +629,8 @@ hr {
 
 
 /* .calendar-table{ */
-  /* cellspacing="21" cellpadding="21" */
-  /* display: flex;
+/* cellspacing="21" cellpadding="21" */
+/* display: flex;
   justify-content: center;
 }
 
