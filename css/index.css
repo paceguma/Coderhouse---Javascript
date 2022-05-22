@@ -399,17 +399,11 @@ hr {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /** CALENDAR SECTION **/
+.calendar{
+  margin-bottom: 150px;
+}
+
 .calendar-title {
   height: 300px;
   display: flex;
@@ -433,7 +427,6 @@ hr {
   font-size: 18px;
   font-family: helvetica;
   letter-spacing: .1rem;
-  ;
 }
 
 .calendar-timetable {
@@ -625,182 +618,122 @@ hr {
   border: 1px solid var(--pinkColor);
 }
 
+/*SALA SECTION */
 
-
-
-/* .calendar-table{ */
-/* cellspacing="21" cellpadding="21" */
-/* display: flex;
-  justify-content: center;
-}
-
-.calendar-table-days-activities  {
-  font-family: Helvetica;
-  font-size: 14px;
-} */
-
-/*
-.calendar {
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 2rem;
+.banner-sala{
+  color: var(--wordsColors);
+  background-image: url(../img/sala.jpeg);
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.72) 30%,
+      rgba(0, 0, 0, 0.438) 84%,
+      rgba(0, 0, 0, 0.199) 100%),
+    url(../img/sala.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
   display: flex;
-
-  background-color: #25252e;
-
-  border-radius: 15px;
-} */
-/* 
-table th {
-  color: var(--wordsColors);
-}
-
-tr {
-  font-size: 1.2rem;
-}
-
-td {
-  background-color: var(--wordsColors);
-  width: 100px;
-  height: 60px;
-  border-radius: 15px;
-}
-
-.calendarButton {
-  background-color: var(--turquoiseColor);
-  border: none;
-  border-radius: 30px;
-  margin-left: 20rem;
-  font-size: 1.3rem;
-  padding: 0.4rem;
-  width: 120px;
-  color: var(--wordsColors);
-}
-
-.actividades {
-  height: 600px;
-  margin-top: 40px;
-  width: 300px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  color: var(--wordsColors);
+  justify-content: center;
   align-items: center;
 }
 
-.cardsActivitiesDetails {
-  justify-content: space-around;
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
-  margin-top: 5px;
+.banner-h3{
+  color: var(--wordsColors);
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 58px;
+  letter-spacing: 1rem;
 }
 
-.dateActivities {
-  display: flex;
-  flex-direction: column;
+
+/* SECTION PROFESSOR */
+
+.title-team{
+  height: 300px;
+  text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
-.x {
-  top: 40px;
-  left: 125px;
-  position: absolute;
+.title-team-h3{
+  color: var(--wordsColors);
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-size: 58px;
+  letter-spacing: 1rem;
 }
 
-.cardsActivitiesEmpty {
-  border: 2px solid white;
-  width: 140px;
-  margin-top: 40px;
-  border-radius: 10px;
+
+.title-team-h4{
+  color: var(--wordsColors);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: helvetica;
+  letter-spacing: .1rem;
+}
+
+.professor-img{
+  width: 400px;
+  height: 500px;
+  border: 1px solid var(--turquoiseColor);
+}
+
+.professor-coach-h4{
+  color: var(--wordsColors);
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: helvetica;
+  letter-spacing: .1rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.professor-name-h5{
+  color: var(--wordsColors);
+  text-transform: uppercase;
+  font-size: 64px;
+  letter-spacing: .1rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.team-professor{
   display: flex;
-  padding: 1rem;
-  height: 60px;
-  position: relative;
-} */
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.professor-coach{
+  width: 30px;
+}
+
+.professor-name{
+  width: 80px;
+}
 
 
-
-
-
-
-
-
-
-
-
+.professor{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+}
 
 
 footer {
-  height: 200px;
-}
-
-
-
-
-
-/** GRAFICA SECTION **/
-
-/* .sectionGrafica {
+  height: 80px;
+  background-color: black;
   display: flex;
-  width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
 }
 
-.divGrafica {
-  height: 420px;
-  width: 25%;
-  border-radius: 25px;
-  background-color: #25252e;
-  align-content: center;
-  display: flex;
-  flex-direction: column;
-}
+.footer-h3{
+  color: var(--greyColor);
+  font-size: 24px;
+  font-family: helvetica;
 
-.divTitles {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  font-size: 1.2rem;
-  color: var(--wordsColors);
-  align-content: center;
 }
-
-.whiteCircle {
-  width: 150px;
-  height: 150px;
-  border: 20px solid white;
-  border-radius: 50%;
-  align-self: center;
-}
-
-.categoriesGrafica {
-  text-align: center;
-  align-self: center;
-  width: 200px;
-  color: white;
-  margin-top: 20px;
-  line-height: 15px;
-}
-
-.divsCategorias {
-  width: 50%;
-  color: white;
-}
-
-.categoriasCards {
-  background-color: #25252e;
-  height: 65px;
-  margin-bottom: 10px;
-  padding: 2rem;
-  border-radius: 15px;
-  color: white;
-}
-
-.buttonVerMas {
-  border: none;
-  background-color: var(--turquoiseColor);
-  border-radius: 20px;
-  width: 100%;
-  padding: 0.5rem;
-} */

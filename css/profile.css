@@ -146,3 +146,69 @@ button {
   font-size: 1.3rem;
   padding: 0.4rem;
 }
+
+/** GRAFICA SECTION **/
+
+.sectionGrafica {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.divGrafica {
+  height: 420px;
+  width: 25%;
+  border-radius: 25px;
+  background-color: #25252e;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.divTitles {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--wordsColors);
+  align-content: center;
+}
+
+.whiteCircle {
+  width: 150px;
+  height: 150px;
+  border: 20px solid white;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.categoriesGrafica {
+  text-align: center;
+  align-self: center;
+  width: 200px;
+  color: white;
+  margin-top: 20px;
+  line-height: 15px;
+}
+
+.divsCategorias {
+  width: 50%;
+  color: white;
+}
+
+.categoriasCards {
+  background-color: #25252e;
+  height: 65px;
+  margin-bottom: 10px;
+  padding: 2rem;
+  border-radius: 15px;
+  color: white;
+}
+
+.buttonVerMas {
+  border: none;
+  background-color: var(--turquoiseColor);
+  border-radius: 20px;
+  width: 100%;
+  padding: 0.5rem;
+}
