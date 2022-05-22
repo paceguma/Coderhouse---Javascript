@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Helvetica Compressed";
-  src: url("../fonts/helveticaComp.ttf"), 
-  local("helveticaComp"), 
-  format("truetype");  
+  src: url("../fonts/helveticaComp.ttf"),
+    local("helveticaComp"),
+    format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -10,9 +10,13 @@
 :root {
   --backGroundColor: #222126;
   --turquoiseColor: #03c1ab;
-  --violetColor: #480d83;
-  --redOrangeColor: #df3838;
+  --violetColor: #840ae1;
+  --redOrangeColor: #F69B11;
   --wordsColors: #ffffff;
+  --greyColor: #C4C4C4;
+  --greenColor: #32F611;
+  --pinkColor: #F611C4;
+  --backgroundColorLight:   #252530;
   --fontFamily: "Helvetica Compressed";
 }
 
@@ -24,39 +28,183 @@
   font-family: "Helvetica Compressed";
 }
 
-/* PROFILE SECTION */
+body {
+  background-color: var(--backGroundColor);
+}
 
-.profileContainer {
+
+
+
+/* HEADER SECTION */
+
+.navBar {
+  padding: 1rem;
+  height: 180px;
+}
+
+.navegation {
+  display: flex;
+  align-content: space-between;
+  margin-left: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.logout {
+  text-align: right;
+  align-items: center;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+
+hr {
+  height: 2px;
+  width: 100%;
+  color: var(--turquoiseColor);
+}
+
+.divLogo {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: var(--turquoiseColor);
+  letter-spacing: 0.2rem;
+}
+
+
+.button-logout {
+  border: none;
+  background-color: var(--backGroundColor);
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  letter-spacing: 0.2rem;
+}
+
+.button-logout a {
+  text-decoration: none;
+  color: var(--turquoiseColor);
+}
+
+.button-logout a:hover {
+  text-decoration: none;
+  color: var(--violetColor);
+}
+
+.button-settings {
+  border: none;
+  background-color: var(--backGroundColor);
+  color: var(--wordsColors);
+  border-radius: 5px;
+  cursor: pointer;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  letter-spacing: 0.2rem;
+}
+
+.button-settings a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+
+
+/**************** PROFILE SECTION ***************************/
+.section-container-profile {
+/* display: flex;
+  justify-content: space-between; */
+  height: 300px;
+  color: var(--wordsColors);
+}
+
+                  .div-welcome {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 0 0 48px;
+                    justify-content: left;
+                  }
+
+                  .welcome-h2 {
+                    font-size: 5rem;
+                    letter-spacing: .3rem;
+                  }
+
+                  .welcome-h3 {
+                    font-size: 1.8rem;
+                    font-family: helvetica;
+                    font-weight: bold;
+                  }
+
+.pass{
+  border: 1px solid yellow;
+  width: 442px;
+  height: 196px;
+}
+
+.pass-background{
+  background-color: var(--backgroundColorLight);
+  border-radius: 8px;
+
+}
+ .activePass {
+   width: 250px;
+   padding: 2rem;
+   border-radius: 10px;
+   background-color: #25252e;
+   display: flex;
+   flex-direction: column;
+   height: 380px;
+ }
+ 
+ .activePass p,
+ h3,
+ button {
+    margin-bottom: 2rem;
+   font-size: 1.7rem;
+ }
+ 
+ .activePass button {
+   background-color: var(--turquoiseColor);
+   border: none;
+   border-radius: 30px;
+   font-size: 1.3rem;
+   padding: 0.4rem;
+ }
+                  
+/* .profileContainer {
   display: flex;
   justify-content: space-between;
   padding: 3rem;
   color: var(--wordsColors);
   max-width: 1400px;
-}
+} */
 
-.turnos h3 {
+/* .turnos h3 {
   letter-spacing: 1px;
   margin-left: 3.7rem;
-}
+} */
 
-.profileButtons {
+/* .profileButtons {
   border: none;
   background-color: var(--backGroundColor);
   font-size: 1.2rem;
   color: var(--wordsColors);
-}
+} */
 
-.configProfile {
+/* .configProfile {
   margin-right: 3rem;
 }
 
-.sectionContainerProfile {
-  max-width: 1400px;
-  display: flex;
-  justify-content: space-evenly;
-  height: 350px;
-  color: var(--wordsColors);
-}
+
 
 .containerStats {
   width: 600px;
@@ -72,18 +220,7 @@
   display: flex;
 }
 
-.divBienvenida {
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
 
-.divBienvenida h3 {
-  font-size: 3rem;
-}
-
-.divBienvenida p {
-  font-size: 1.8rem;
-}
 
 .buttonsContainerStats {
   text-align: center;
@@ -122,30 +259,238 @@
   justify-content: space-between;
 }
 
-.activePass {
-  width: 250px;
-  padding: 2rem;
-  border-radius: 10px;
-  background-color: #25252e;
+
+
+
+
+ */
+
+
+
+
+
+
+
+/*************** CALENDAR SECTION *****************/
+.calendar{
+  margin-bottom: 150px;
+}
+
+.calendar-title {
+  height: 300px;
   display: flex;
   flex-direction: column;
-  height: 380px;
+  justify-content: center;
+
 }
 
-.activePass p,
-h3,
-button {
-  /* margin-bottom: 2rem; */
-  font-size: 1.7rem;
+.calendar-h3 {
+  color: var(--wordsColors);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 58px;
+  letter-spacing: 1rem;
 }
 
-.activePass button {
+.calendar-h4 {
+  color: var(--wordsColors);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: helvetica;
+  letter-spacing: .1rem;
+}
+
+.calendar-timetable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-days {
+  display: flex;
+
+}
+
+.calendar-days-background {
+  width: 350px;
+  height: 30px;
+  /* background-color: var(--redOrangeColor); */
+  margin-right: 25px;
+}
+
+.calendar-week-days {
+  display: flex;
+  margin-right: 8px;
+
+
+}
+
+.calendar-week-days p {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 24px;
+  color: var(--wordsColors);
+}
+
+.calendar-activities {
+  display: flex;
+}
+
+.gym-days {
+  width: 190px;
+  height: 30px;
+  /* border: 1px solid yellow; */
+  text-align: center;
+  margin: 8px 16px 8px 0;
+}
+
+
+.calendar-hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+
+.calendar-morning {
+  width: 230px;
+  /* border: 1px solid #df3838; */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  font-size: 36px;
+  color: var(--wordsColors);
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  margin-top: 8px;
+}
+
+.calendar-afternoon {
+  width: 230px;
+  /* border: 1px solid #df3838; */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  font-size: 36px;
+  color: var(--wordsColors);
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  margin-top: 8px;
+
+}
+
+.gym-hour {
+  width: 120px;
+  height: 50px;
+  /* border: 1px solid #df3838; */
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: .1rem;
+  color: var(--wordsColors);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 16px 8px 0;
+}
+
+
+
+.gym-class {
+  width: 190px;
+  height: 50px;
+  /* border: .02px solid var(--turquoiseColor); */
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: .1rem;
+  color: var(--wordsColors);
+  display: flex;
+  align-items: center;
+  margin: 8px 16px 8px 0;
+}
+
+.container {
+  display: flex;
+}
+
+.div-space {
+  height: 30px;
+  /* border: 1px solid #df3838; */
+}
+
+.rectangule-power-stretching {
+  width: 15px;
+  height: 50px;
+  background-color: var(--violetColor);
+  margin-right: 8px;
+}
+
+.rectangule-abs {
+  width: 15px;
+  height: 50px;
+  background-color: var(--redOrangeColor);
+  margin-right: 8px;
+}
+
+.rectangule-zumba {
+  width: 15px;
+  height: 50px;
   background-color: var(--turquoiseColor);
-  border: none;
-  border-radius: 30px;
-  font-size: 1.3rem;
-  padding: 0.4rem;
+  margin-right: 8px;
 }
+
+.rectangule-cardio {
+  width: 15px;
+  height: 50px;
+  background-color: var(--greyColor);
+  margin-right: 8px;
+}
+
+.rectangule-aerobox {
+  width: 15px;
+  height: 50px;
+  background-color: var(--greenColor);
+  margin-right: 8px;
+}
+
+.rectangule-step {
+  width: 15px;
+  height: 50px;
+  background-color: var(--pinkColor);
+  margin-right: 8px;
+}
+
+
+.border-cardio {
+  border: 1px solid var(--greyColor);
+}
+
+.border-aerobox {
+  border: 1px solid var(--greenColor);
+}
+
+.border-zumba {
+  border: 1px solid var(--turquoiseColor);
+}
+
+.border-power-stretching {
+  border: 1px solid var(--violetColor);
+}
+
+.border-abs {
+  border: 1px solid var(--redOrangeColor);
+}
+
+.border-step {
+  border: 1px solid var(--pinkColor);
+}
+
+
 
 /** GRAFICA SECTION **/
 
@@ -211,4 +556,4 @@ button {
   border-radius: 20px;
   width: 100%;
   padding: 0.5rem;
-}
+} */

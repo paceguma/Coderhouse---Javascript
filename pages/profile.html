@@ -1,215 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>GymNess</title>
-    <link rel="stylesheet" href="../css/profile.css" />
-  </head>
 
-  <body>
-    <header>
-      <nav class="profileContainer">
-        <div class="turnos">
-          <h3>TURNOS</h3>
-        </div>
-        <div class="configProfile">
-          <a href="./index.html" class="profileButtons">HOME</a>
-          <button
-            class="profileButtons"
-            onclick="localStorage.clear(); alert('Usuario desconectado'); location.href='registro.html';"
-          >
-            SALIR
-          </button>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>GymNess</title>
+  <link rel="stylesheet" href="../css/profile.css" />
+</head>
 
-    <section class="sectionContainerProfile">
-      <div class="containerStats">
-        <div class="divSpanVencimiento">
-          <span>Proximo Vencimiento entre el: 24/5/2022</span>
-          <span>X</span>
-        </div>
-        <div class="divBienvenida">
-          <h3 id="bienvenidaH3"></h3>
-          <p>You can with everything</p>
-        </div>
-
-        <div class="buttonsContainerStats">
-          <button>Weekly Stats</button>
-          <button>Total Time</button>
-          <button>Today</button>
-        </div>
-        <div class="divCircles">
-          <div class="containerCircles">
-            <div class="redCircle"></div>
-            <p>2.154 KCAL BURNT</p>
-          </div>
-          <div class="containerCircles">
-            <div class="redCircle"></div>
-            <p>TIME</p>
-            <p>45 MIN</p>
-          </div>
+<body>
+  <header class="header">
+    <nav class="navBar">
+      <div class="logout">
+        <button class="button-logout"><a href="./login.html">Logout</a></button>
+        <hr />
+      </div>
+      <div class="navegation">
+        <div class="divLogo">GymNess</div>
+        <div>           <button class="button-settings"> <a href="./register.html">Settings</a> </button>
         </div>
       </div>
-      <div class="activePass">
-        <p>Active pass</p>
-        <h2>57</h2>
-        <h2>FREE PASS</h2>
-        <h3>Credits available</h3>
-        <h3>Available to date: <span>24/5/2022</span></h3>
-        <button>My credits</button>
-        <button>History</button>
-        <button>+</button>
-      </div>
-    </section>
+    </nav>
+  </header>
 
-    <section>
-      <h2>activities in progress</h2>
-      <div class="actividades">
-        <h2>Actividades</h2>
-        <div class="actividadesContainer">
-          <div>
-            <div class="dateActivities">
-              <h2>Lun</h2>
-              <span>28</span>
+  <section class="section-container-profile">
+
+    <div class="div-welcome">
+      <h2 id="welcomeH3" class="welcome-h2">Hi Paula</h2>
+      <h3 class="welcome-h3">You can do everything</h3>
+    </div>
+
+    <div class="pass">     
+       <h2 class="active-pass-h2">Active pass</h2>
+
+      <div class="pass-background">
+            <p class="active-pass-credits">57</p>
+      <p class="active-pass">Free Pass</p>
+      <p class="active-pass-p">Credits available</p>
+      <p class="active-pass-p">Available to date: <span>24/5/2022</span></p>
+      <button class="active-pass-button">My credits</button>
+      <button class="active-pass-button">History</button>
+      <button class="active-pass-button-plus">+</button>
+      </div>
+  
+    </div>
+
+
+<!-- 
+    <div class="containerStats">
+         <div class="buttonsContainerStats">
+        <button>Weekly Stats</button>
+        <button>Total Time</button>
+        <button>Today</button>
+      </div>
+      <div class="divCircles">
+        <div class="containerCircles">
+          <div class="redCircle"></div>
+          <p>2.154 KCAL BURNT</p>
+        </div>
+        <div class="containerCircles">
+          <div class="redCircle"></div>
+          <p>TIME</p>
+          <p>45 MIN</p>
+        </div>
+      </div>
+    </div> -->
+
+
+   
+  </section>
+
+  <!-- <section>
+    <h2>activities in progress</h2>
+    <div class="actividades">
+      <h2>Actividades</h2>
+      <div class="actividadesContainer">
+        <div>
+          <div class="dateActivities">
+            <h2>Lun</h2>
+            <span>28</span>
+          </div>
+
+          <div class="cardsActivitiesDetails">
+            <p>Zumba</p>
+            <p>15:15</p>
+          </div>
+
+          <span class="x">X</span>
+        </div>
+        <div class="cardsActivitiesEmpty"></div>
+        <div class="cardsActivitiesEmpty"></div>
+        <div class="cardsActivitiesEmpty"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="calendar">
+    <div class="calendar-title">
+      <h3 class="calendar-h3">Our class timetable</h3>
+      <h4 class="calendar-h4">Planned for you</h4>
+    </div>
+
+    <div class="calendar-timetable">
+
+      <div class="calendar-days">
+        <div class="calendar-days-background"> </div>
+        <div class="calendar-week-days">
+          <div class="gym-days">
+            <p>Monday</p>
+          </div>
+          <div class="gym-days">
+            <p>Tuesday</p>
+          </div>
+          <div class="gym-days">
+            <p>Wednesday</p>
+          </div>
+          <div class="gym-days">
+            <p>Thursday</p>
+          </div>
+          <div class="gym-days">
+            <p>Friday</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="calendar-activities">
+        <div class="calendar-morning">Morning</div>
+        <div class="calendar-hours">
+          <div class="gym-hour">7am</div>
+          <div class="gym-hour">8am</div>
+          <div class="gym-hour">9am</div>
+        </div>
+        <div class="calendar-days-activities">
+          <div class="container">
+            <div class="gym-class border-power-stretching">
+              <div class="rectangule-power-stretching"></div> Power-stretching
             </div>
-
-            <div class="cardsActivitiesDetails">
-              <p>Zumba</p>
-              <p>15:15</p>
+            <div class="gym-class border-power-stretching">
+              <div class="rectangule-power-stretching"></div> Power-stretching
             </div>
-
-            <span class="x">X</span>
+            <div class="gym-class border-power-stretching">
+              <div class="rectangule-power-stretching"></div> Power-stretching
+            </div>
+            <div class="gym-class border-abs">
+              <div class="rectangule-abs"></div> Abs
+            </div>
+            <div class="gym-class border-power-stretching">
+              <div class="rectangule-power-stretching"></div> Power-stretching
+            </div>
           </div>
-          <div class="cardsActivitiesEmpty"></div>
-          <div class="cardsActivitiesEmpty"></div>
-          <div class="cardsActivitiesEmpty"></div>
+          <div class="container">
+            <div class="gym-class border-abs">
+              <div class="rectangule-abs"></div> Abs
+            </div>
+            <div class="gym-class border-step">
+              <div class="rectangule-step"></div> Step
+            </div>
+            <div class="gym-class border-abs">
+              <div class="rectangule-abs"></div> Abs
+            </div>
+            <div class="gym-class border-step">
+              <div class="rectangule-step"></div> Step
+            </div>
+            <div class="gym-class border-step">
+              <div class="rectangule-step"></div> Step
+            </div>
+          </div>
+          <div class="container">
+            <div class="gym-class"></div>
+            <div class="gym-class"></div>
+            <div class="gym-class"></div>
+            <div class="gym-class border-power-stretching">
+              <div class="rectangule-power-stretching"></div> Power-stretching
+            </div>
+            <div class="gym-class border-abs">
+              <div class="rectangule-abs"></div> Abs
+            </div>
+          </div>
         </div>
+
       </div>
-    </section>
+      <div class="div-space"></div>
 
-    <section class="calendar">
-      <h2>Class timetable</h2>
-      <table cellspacing="21" cellpadding="21">
-        <!-- The tr tag is used to enter rows in the table -->
-        <!-- It is used to give the heading to the table. We can give the heading to the top and bottom of the table -->
+      <div class="calendar-activities">
+        <div class="calendar-afternoon">Afternoon</div>
+        <div class="calendar-hours">
+          <div class="gym-hour">4.15pm</div>
+          <div class="gym-hour">5.15pm</div>
+          <div class="gym-hour">6.15pm</div>
+          <div class="gym-hour">7.15pm</div>
+          <div class="gym-hour">8.15pm</div>
+        </div>
 
-        <caption align="top">
-          <!-- Here we have used the attribute that is style and we have colored the sentence to make it better depending on the web page-->
-        </caption>
 
-        <!-- Here th stands for the heading of the table that comes in the first row-->
-        <!-- The text in this table header tag will appear as bold and is center aligned-->
 
-        <thead>
-          <tr>
-            <!-- Here we have applied inline style to make it more attractive-->
 
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-          </tr>
-        </thead>
 
-        <tbody class="calendarTimetable">
-          <tr>
-            <td id="1">Power- stretching</td>
-            <td id="2">Power- stretching</td>
-            <td id="3">Power- stretching</td>
-            <td id="4">Abs</td>
-            <td id="5">Power- stretching</td>
-          </tr>
 
-          <tr>
-            <td id="6">Abs</td>
-            <td id="7">Step</td>
-            <td id="8">Abs</td>
-            <td id="9">Step</td>
-            <td id="10">Step</td>
-          </tr>
-          <tr>
-            <td id="11"></td>
-            <td id="12"></td>
-            <td id="13"></td>
-            <td id="14">Power-stretching</td>
-            <td id="15">Abs</td>
-          </tr>
-          <tr>
-            <td id="16"></td>
-            <td id="17">Power-stretching</td>
-            <td id="18"></td>
-            <td id="19">Power-stretching</td>
-            <td id="20"></td>
-          </tr>
-          <tr>
-            <td id="21">Step</td>
-            <td id="22">Abs</td>
-            <td id="23">Step</td>
-            <td id="24">Abs</td>
-            <td id="25">Abs</td>
-          </tr>
-          <tr>
-            <td id="26">Zumba</td>
-            <td id="27">Step</td>
-            <td id="28">Zumba</td>
-            <td id="29">Aerobox</td>
-            <td id="30">Zumba</td>
-          </tr>
-          <tr>
-            <td id="31">Cardio</td>
-            <td id="32">Zumba</td>
-            <td id="33">Aerobox</td>
-            <td id="34">Cardio</td>
-            <td id="35">Aerobox</td>
-          </tr>
-          <tr>
-            <td id="36">Aerobox</td>
-            <td id="37">Cardio</td>
-            <td id="38"></td>
-            <td id="39">Zumba</td>
-            <td id="40">Cardio</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+        <div class="calendar-days-activities">
+          <div class="container">
+            <div class="gym-class"></div>
+            <div class="gym-class border-power-stretching">
+              <div class="rectangule-power-stretching"></div> Power-stretching
+            </div>
+            <div class="gym-class"></div>
+            <div class="gym-class border-power-stretching">
+              <div class="rectangule-power-stretching"></div> Power-stretching
+            </div>
+            <div class="gym-class"></div>
+          </div>
+          <div class="container">
+            <div class="gym-class border-step">
+              <div class="rectangule-step"></div> Step
+            </div>
+            <div class="gym-class border-abs">
+              <div class="rectangule-abs"></div> Abs
+            </div>
+            <div class="gym-class border-step">
+              <div class="rectangule-step"></div> Step
+            </div>
+            <div class="gym-class border-abs">
+              <div class="rectangule-abs"></div> Abs
+            </div>
+            <div class="gym-class border-abs">
+              <div class="rectangule-abs"></div> Abs
+            </div>
+          </div>
+          <div class="container">
+            <div class="gym-class border-zumba">
+              <div class="rectangule-zumba"></div> Zumba
+            </div>
+            <div class="gym-class border-step">
+              <div class="rectangule-step"></div> Step
+            </div>
+            <div class="gym-class border-zumba">
+              <div class="rectangule-zumba"></div> Zumba
+            </div>
+            <div class="gym-class border-aerobox">
+              <div class="rectangule-aerobox"></div> Aerobox
+            </div>
+            <div class="gym-class border-zumba">
+              <div class="rectangule-zumba"></div> Zumba
+            </div>
+          </div>
+          <div class="container">
+            <div class="gym-class border-cardio">
+              <div class="rectangule-cardio"></div> Cardio
+            </div>
+            <div class="gym-class border-zumba">
+              <div class="rectangule-zumba"></div> Zumba
+            </div>
+            <div class="gym-class border-aerobox">
+              <div class="rectangule-aerobox"></div> Aerobox
+            </div>
+            <div class="gym-class border-cardio">
+              <div class="rectangule-cardio"></div> Cardio
+            </div>
+            <div class="gym-class border-aerobox">
+              <div class="rectangule-aerobox"></div> Aerobox
+            </div>
+          </div>
+          <div class="container">
+            <div class="gym-class border-aerobox">
+              <div class="rectangule-aerobox"></div> Aerobox
+            </div>
+            <div class="gym-class border-cardio">
+              <div class="rectangule-cardio"></div> Cardio
+            </div>
+            <div class="gym-class"></div>
+            <div class="gym-class border-zumba">
+              <div class="rectangule-zumba"></div> Zumba
+            </div>
+            <div class="gym-class border-cardio">
+              <div class="rectangule-cardio"></div> Cardio
+            </div>
+          </div>
+        </div>
 
-    <section class="sectionGrafica">
-      <div class="divGrafica">
-        <canvas id="myChart" width="100" height="100"></canvas>
       </div>
+    </div>
 
-      <div class="divsCategorias">
-        <h3>Our classes</h3>
-        <div class="categoriasCards">
-          <h3>Zumba</h3>
-        </div>
-        <div class="categoriasCards">
-          <h3>Yoga</h3>
-        </div>
-        <div class="categoriasCards">
-          <h3>Gap</h3>
-        </div>
-        <button class="buttonVerMas">V</button>
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+  <section class="sectionGrafica">
+    <div class="divGrafica">
+      <canvas id="myChart" width="100" height="100"></canvas>
+    </div>
+
+    <div class="divsCategorias">
+      <h3>Our classes</h3>
+      <div class="categoriasCards">
+        <h3>Zumba</h3>
       </div>
-    </section>
+      <div class="categoriasCards">
+        <h3>Yoga</h3>
+      </div>
+      <div class="categoriasCards">
+        <h3>Gap</h3>
+      </div>
+      <button class="buttonVerMas">V</button>
+    </div>
+  </section> -->
 
-    <!-- <script src="../js/main.js"></script> -->
-
-
-
-
-
-
-
-
-
-
+  <!-- <script src="../js/main.js"></script> -->
 
 
 
@@ -217,32 +324,43 @@
 
 
 
-  </body>
-  <script>
-    const ctx = document.getElementById("myChart").getContext("2d");
-    const myChart = new Chart(ctx, {
-      type: "doughnut",
-      data: {
-        labels: ["Zumba", "Cardio", "Step", "Power-stretching", "Abs", "Step"],
-        datasets: [
-          {
-            label: "Clases Hechas",
-            data: [300, 50, 100, 35, 70,90],
-            backgroundColor: [
-              "rgb(255, 99, 132)",
-              "rgb(54, 162, 235)",
-              "rgb(255, 120, 86)",
-              "rgb(108, 2, 54)",
-              "rgb(150, 40, 5)",
-              "rgb(170, 130, 20)",
-            ],
-            hoverOffset: 2,
-          },
-        ],
-      },
-      options: {
-        radius: 110,
-      },
-    });
-  </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+<script>
+  const ctx = document.getElementById("myChart").getContext("2d");
+  const myChart = new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["Zumba", "Cardio", "Step", "Power-stretching", "Abs", "Step"],
+      datasets: [
+        {
+          label: "Clases Hechas",
+          data: [300, 50, 100, 35, 70, 90],
+          backgroundColor: [
+            "rgb(255, 99, 132)",
+            "rgb(54, 162, 235)",
+            "rgb(255, 120, 86)",
+            "rgb(108, 2, 54)",
+            "rgb(150, 40, 5)",
+            "rgb(170, 130, 20)",
+          ],
+          hoverOffset: 2,
+        },
+      ],
+    },
+    options: {
+      radius: 110,
+    },
+  });
+</script>
+
 </html>

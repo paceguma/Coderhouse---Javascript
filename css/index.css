@@ -31,7 +31,7 @@ body {
   background-color: var(--backGroundColor);
 }
 
-/* HEADER SECTION */
+/******************* HEADER SECTION ********************/
 
 .navBar {
   padding: 1rem;
@@ -83,7 +83,7 @@ hr {
   letter-spacing: 0.1rem;
 }
 
-/* BUTTONS LOGIN & REGISTER */
+/*************** BUTTONS LOGIN & REGISTER **************/
 
 .buttonLogin {
   border: none;
@@ -133,7 +133,7 @@ hr {
   color: var(--turquoiseColor);
 }
 
-/* MAIN SECTION */
+/*************** MAIN SECTION ****************/
 
 .mainSection {
   color: var(--wordsColors);
@@ -186,7 +186,7 @@ hr {
   padding-top: 2rem;
 }
 
-/* ACTIVITIES SECTION */
+/******************* ACTIVITIES SECTION *****************/
 
 .activities-h3 {
   color: var(--wordsColors);
@@ -313,7 +313,7 @@ hr {
   transition: all ease-in-out 0.2s;
 }
 
-/* PRICES SECTION */
+/***************** PRICES SECTION *****************/
 
 .section-card-prices-h3 {
   color: var(--wordsColors);
@@ -399,7 +399,7 @@ hr {
 
 
 
-/** CALENDAR SECTION **/
+/*************** CALENDAR SECTION *****************/
 .calendar{
   margin-bottom: 150px;
 }
@@ -618,7 +618,7 @@ hr {
   border: 1px solid var(--pinkColor);
 }
 
-/*SALA SECTION */
+/********************* SALA SECTION *****************/
 
 .banner-sala{
   color: var(--wordsColors);

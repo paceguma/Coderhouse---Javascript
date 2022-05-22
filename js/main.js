@@ -58,7 +58,7 @@ function registrarUsuario(nombreRegistro, emailRegistro, contraseñaRegistro) {
 }
 
 
-const bienvenida = document.getElementById("bienvenidaH3");
+const bienvenida = document.getElementById("welcomeH3");
 let usuarioStorage = localStorage.getItem("usuario");
 bienvenida.innerHTML =
     "Bienvenido/a" + " " + `<strong>${usuarioStorage}</strong>`;
