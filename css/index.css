@@ -724,7 +724,7 @@ justify-content: center;
 
 
 footer {
-  height: 80px;
+  height: 40px;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -733,7 +733,7 @@ footer {
 
 .footer-h3{
   color: var(--greyColor);
-  font-size: 24px;
+  font-size: 12px;
   font-family: helvetica;
 
 }
