@@ -1,0 +1,640 @@
+@font-face {
+  font-family: "Helvetica Compressed";
+  src: url("../fonts/helveticaComp.ttf"),
+  local("helveticaComp"),
+  format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root {
+  --backGroundColor: #222126;
+  --turquoiseColor: #03c1ab;
+  --violetColor: #480d83;
+  --redOrangeColor: #df3838;
+  --wordsColors: #ffffff;
+  --fontFamily: "Helvetica Compressed";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Helvetica Compressed";
+}
+
+body {
+  background-color: var(--backGroundColor);
+}
+
+/* HEADER SECTION */
+
+.navBar {
+  padding: 1rem;
+  height: 180px;
+}
+
+.navegation {
+  display: flex;
+  align-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.login {
+  text-align: right;
+  align-items: center;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+
+hr {
+  height: 2px;
+  width: 100%;
+  color: var(--turquoiseColor);
+}
+
+.divLogo {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: var(--turquoiseColor);
+  letter-spacing: 0.2rem;
+}
+
+.divListNav {
+  display: flex;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+.divListNav a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--wordsColors);
+  margin-left: 16px;
+  margin-right: 16px;
+  letter-spacing: 0.1rem;
+}
+
+/* BUTTONS LOGIN & REGISTER */
+
+.buttonLogin {
+  border: none;
+  background-color: var(--backGroundColor);
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  letter-spacing: 0.2rem;
+}
+
+.buttonLogin a {
+  text-decoration: none;
+  color: var(--turquoiseColor);
+}
+
+.buttonLogin a:hover {
+  text-decoration: none;
+  color: var(--violetColor);
+}
+
+.buttonRegister {
+  border: none;
+  background-color: var(--violetColor);
+  color: var(--wordsColors);
+  border-radius: 5px;
+  cursor: pointer;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  letter-spacing: 0.2rem;
+}
+
+.buttonRegister a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.buttonRegister a:hover {
+  text-decoration: none;
+  color: var(--turquoiseColor);
+}
+
+/* MAIN SECTION */
+
+.mainSection {
+  color: var(--wordsColors);
+  text-align: center;
+  background-image: url(../img/index.jpeg);
+  background-image: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.72) 30%,
+      rgba(0, 0, 0, 0.438) 84%,
+      rgba(0, 0, 0, 0.199) 100%),
+    url(../img/index.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+  text-align: left;
+}
+
+.h1 {
+  font-size: 68px;
+  text-transform: uppercase;
+  text-align: left;
+  width: 500px;
+  margin-left: 2rem;
+  margin-top: 4rem;
+}
+
+.buttonJoinUsSeparation {
+  padding-top: 2rem;
+}
+
+.buttonJoinUs {
+  text-transform: uppercase;
+  font-size: 36px;
+  cursor: pointer;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 2rem;
+  background-color: var(--turquoiseColor);
+  border-radius: 90px;
+  text-decoration: none;
+  color: var(--wordsColors);
+  border-color: var(--turquoiseColor);
+  letter-spacing: 0.1rem;
+}
+
+.infoBanner {
+  padding-top: 2rem;
+}
+
+/* ACTIVITIES SECTION */
+
+.activities-h3 {
+  color: var(--wordsColors);
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  text-transform: uppercase;
+  font-size: 58px;
+  letter-spacing: 1rem;
+}
+
+.activitiesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cardsActivities {
+  color: var(--wordsColors);
+  border: 1px solid var(--turquoiseColor);
+  width: 670px;
+  height: 410px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.imgCard {
+  height: 400px;
+}
+
+.imgCard-power-stretching {
+  height: 300px;
+}
+
+.imgCard-aerobox {
+  width: 500px;
+}
+
+.divImg-zumba {
+  position: absolute;
+  left: 10rem;
+  top: 8px;
+}
+
+.divImg-power-stretching {
+  position: absolute;
+  left: 14rem;
+  top: 80px;
+}
+
+.divImg-abs {
+  position: absolute;
+  left: 14rem;
+  top: 8px;
+}
+
+.divImg-cardio {
+  position: absolute;
+  left: 17rem;
+  top: 20px;
+}
+
+.divImg-aerobox {
+  position: absolute;
+  left: 14rem;
+  top: 75px;
+}
+
+.divImg-step {
+  position: absolute;
+  left: 20rem;
+  top: 20px;
+}
+
+.divActivitiesDetails {
+  padding-left: 2rem;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.divActivitiesDetails h4 {
+  font-size: 36px;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.divActivitiesDetails p {
+  font-size: 20px;
+  font-family: Helvetica;
+  line-height: 24px;
+  width: 300px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.buttonMore {
+  border: none;
+  background-color: transparent;
+  color: var(--wordsColors);
+  text-align: left;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: var(--turquoiseColor);
+  font-weight: bold;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.cardsActivities:hover {
+  background-color: var(--turquoiseColor);
+  transition: all ease-in-out 0.5s;
+  color: var(--backGroundColor);
+}
+
+.buttonMore:hover {
+  background-color: transparent;
+  color: var(--violetColor);
+  transition: all ease-in-out 0.2s;
+}
+
+/* PRICES SECTION */
+
+.section-card-prices-h3 {
+  color: var(--wordsColors);
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  text-transform: uppercase;
+  font-size: 58px;
+  letter-spacing: 1rem;
+}
+
+.card-prices-icon {
+  padding-top: 50px;
+  width: 48px;
+}
+
+.card-prices-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cards-prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--turquoiseColor);
+  width: 350px;
+  height: 500px;
+  color: var(--wordsColors);
+  border-radius: 8px;
+  align-items: center;
+}
+
+.cards-prices-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-prices h4 {
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.cards-prices h5 {
+  padding-top: 16px;
+  font-family: Helvetica;
+  font-size: 16px;
+  width: 180px;
+  text-align: center;
+}
+
+.cards-prices h6 {
+  padding-top: 16px;
+  font-size: 48px;
+  letter-spacing: 0.2rem;
+}
+
+.cards-prices-button {
+  background-color: var(--turquoiseColor);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  color: var(--wordsColors);
+  margin: 32px;
+  padding: 8px 16px;
+  color: var(--backGroundColor);
+  cursor: pointer;
+}
+
+.cards-prices:hover {
+  background-color: var(--turquoiseColor);
+  border: 1px solid var(--turquoiseColor);
+  transition: all 0.5s;
+  color: var(--backGroundColor);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** CALENDAR SECTION **/
+                                        .calendar-title{
+                                          height: 300px;
+                                          display: flex;
+                                          flex-direction: column;
+                                          justify-content: center;
+
+                                        }
+
+                                        .calendar-h3{
+                                            color: var(--wordsColors);
+                                            text-align: center;
+                                            text-transform: uppercase;
+                                            font-size: 58px;
+                                            letter-spacing: 1rem;
+                                          }
+
+                                          .calendar-h4{
+                                            color: var(--wordsColors);
+                                            text-align: center;
+                                            text-transform: uppercase;
+                                            font-size: 18px;
+                                            font-family: helvetica;
+                                            letter-spacing: .1rem;;
+                                          }
+
+.calendar-timetable{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.calendar-days{
+display: flex;
+
+}
+
+.calendar-days-background{
+  width: 150px;
+  height: 30px;
+  background-color: var(--redOrangeColor);
+}
+
+.calendar-week-days{
+  display: flex; 
+  justify-content: space-between;
+  flex: 1;
+}
+
+.calendar-week-days p{
+  /* margin-left: 1rem ; */
+  text-transform: uppercase;
+ letter-spacing: .2rem;
+ font-size: 24px;
+ color: var(--wordsColors);
+}
+
+/* .calendar-table{ */
+  /* cellspacing="21" cellpadding="21" */
+  /* display: flex;
+  justify-content: center;
+}
+
+.calendar-table-days-activities  {
+  font-family: Helvetica;
+  font-size: 14px;
+} */
+
+/*
+.calendar {
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  display: flex;
+
+  background-color: #25252e;
+
+  border-radius: 15px;
+} */
+/* 
+table th {
+  color: var(--wordsColors);
+}
+
+tr {
+  font-size: 1.2rem;
+}
+
+td {
+  background-color: var(--wordsColors);
+  width: 100px;
+  height: 60px;
+  border-radius: 15px;
+}
+
+.calendarButton {
+  background-color: var(--turquoiseColor);
+  border: none;
+  border-radius: 30px;
+  margin-left: 20rem;
+  font-size: 1.3rem;
+  padding: 0.4rem;
+  width: 120px;
+  color: var(--wordsColors);
+}
+
+.actividades {
+  height: 600px;
+  margin-top: 40px;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: var(--wordsColors);
+  align-items: center;
+}
+
+.cardsActivitiesDetails {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.dateActivities {
+  display: flex;
+  flex-direction: column;
+}
+
+.x {
+  top: 40px;
+  left: 125px;
+  position: absolute;
+}
+
+.cardsActivitiesEmpty {
+  border: 2px solid white;
+  width: 140px;
+  margin-top: 40px;
+  border-radius: 10px;
+  display: flex;
+  padding: 1rem;
+  height: 60px;
+  position: relative;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  height: 200px;
+}
+
+
+
+
+
+/** GRAFICA SECTION **/
+
+/* .sectionGrafica {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.divGrafica {
+  height: 420px;
+  width: 25%;
+  border-radius: 25px;
+  background-color: #25252e;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.divTitles {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--wordsColors);
+  align-content: center;
+}
+
+.whiteCircle {
+  width: 150px;
+  height: 150px;
+  border: 20px solid white;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.categoriesGrafica {
+  text-align: center;
+  align-self: center;
+  width: 200px;
+  color: white;
+  margin-top: 20px;
+  line-height: 15px;
+}
+
+.divsCategorias {
+  width: 50%;
+  color: white;
+}
+
+.categoriasCards {
+  background-color: #25252e;
+  height: 65px;
+  margin-bottom: 10px;
+  padding: 2rem;
+  border-radius: 15px;
+  color: white;
+}
+
+.buttonVerMas {
+  border: none;
+  background-color: var(--turquoiseColor);
+  border-radius: 20px;
+  width: 100%;
+  padding: 0.5rem;
+} */
