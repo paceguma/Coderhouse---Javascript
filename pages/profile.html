@@ -19,7 +19,7 @@
       </div>
       <div class="navegation">
         <div class="divLogo">GymNess</div>
-        <div>           <button class="button-settings"> <a href="./register.html">Settings</a> </button>
+        <div> <button class="button-settings"> <a href="./register.html">Settings</a> </button>
         </div>
       </div>
     </nav>
@@ -32,28 +32,32 @@
       <h3 class="welcome-h3">You can do everything</h3>
     </div>
 
-    <div class="pass">     
-       <h2 class="active-pass-h2">Active pass</h2>
+    <div class="pass">
+      <h2 class="active-pass-h2">Active pass</h2>
 
       <div class="pass-background">
-          <div class="pass-credits-available">
-                    <p class="active-pass-credits">57</p>
-                    <p class="active-pass-p">Credits available</p>
-                    <p class="active-pass">Free Pass</p>
-          </div>
-          <div class="pass-history">
-                    <p class="active-pass-p">Available to date: <span>24/5/2022</span></p>
-                    <button class="active-pass-button">My credits</button>
-                    <button class="active-pass-button">History</button>
-                   
-          </div>
-          <button class="active-pass-button-plus">+</button>
-       </div>
-  
+        <div class="pass-credits-available">
+          <p class="active-pass-credits">57</p>
+          <p class="active-pass-p">Credits available</p>
+          <p class="active-pass">Free Pass</p>
+        </div>
+
+        <div class="pass-history">
+
+          <div class="button-pass"> <button class="active-pass-button">My credits</button> </div>
+          <div class="button-pass"> <button class="active-pass-button">History</button> </div>
+          <div class="available"> <p class="active-pass-p">Available to date: </p>
+                <span>24/5/2022</span>
+            </div>
+         </div>
+        <div class="pass-button-plus"> <button class="active-pass-button-plus">+</button></div>
+
+      </div>
+
     </div>
 
 
-<!-- 
+    <!-- 
     <div class="containerStats">
          <div class="buttonsContainerStats">
         <button>Weekly Stats</button>
@@ -74,39 +78,24 @@
     </div> -->
 
 
+
+  </section>
+
+  <section class="container-class-reminder">
+    <div class="container-class">
+
+    </div>
+  </section>
+
+<section class="timetable-chart">
+  <div class="calendar-title">
+    <h2 class="timetable-chart-h2">Class timetable</h2>
+    <h2 class="timetable-chart-h2 chart-h2">Activities done</h2>
+  </div>
+
+  <div class="calendar-chart">
+   <div class="calendar">
    
-  </section>
-
-  <!-- <section>
-    <h2>activities in progress</h2>
-    <div class="actividades">
-      <h2>Actividades</h2>
-      <div class="actividadesContainer">
-        <div>
-          <div class="dateActivities">
-            <h2>Lun</h2>
-            <span>28</span>
-          </div>
-
-          <div class="cardsActivitiesDetails">
-            <p>Zumba</p>
-            <p>15:15</p>
-          </div>
-
-          <span class="x">X</span>
-        </div>
-        <div class="cardsActivitiesEmpty"></div>
-        <div class="cardsActivitiesEmpty"></div>
-        <div class="cardsActivitiesEmpty"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="calendar">
-    <div class="calendar-title">
-      <h3 class="calendar-h3">Our class timetable</h3>
-      <h4 class="calendar-h4">Planned for you</h4>
-    </div>
 
     <div class="calendar-timetable">
 
@@ -298,15 +287,33 @@
 
 
 
-  </section>
+  
+  
+  </div>
+  
+<div class="chart-quantity">
+  <div class="chart">
+    <canvas id="myChart" ></canvas>
+  </div>
+
+  <div class="profile-time-kcal">
+    <div class="profile-title-h2">Quantity</div>
+    <div class="profile-kcal"></div>
+    <div class="profile-time"></div>
+  </div>
+
+</div>
+
+  </div>
+
+</section>
 
 
-  <section class="sectionGrafica">
-    <div class="divGrafica">
-      <canvas id="myChart" width="100" height="100"></canvas>
-    </div>
 
-    <div class="divsCategorias">
+
+
+
+    <!-- <div class="divsCategorias">
       <h3>Our classes</h3>
       <div class="categoriasCards">
         <h3>Zumba</h3>
@@ -318,54 +325,13 @@
         <h3>Gap</h3>
       </div>
       <button class="buttonVerMas">V</button>
-    </div>
-  </section> -->
-
-  <!-- <script src="../js/main.js"></script> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div> -->
 
 
 
 </body>
-<script>
-  const ctx = document.getElementById("myChart").getContext("2d");
-  const myChart = new Chart(ctx, {
-    type: "doughnut",
-    data: {
-      labels: ["Zumba", "Cardio", "Step", "Power-stretching", "Abs", "Step"],
-      datasets: [
-        {
-          label: "Clases Hechas",
-          data: [300, 50, 100, 35, 70, 90],
-          backgroundColor: [
-            "rgb(255, 99, 132)",
-            "rgb(54, 162, 235)",
-            "rgb(255, 120, 86)",
-            "rgb(108, 2, 54)",
-            "rgb(150, 40, 5)",
-            "rgb(170, 130, 20)",
-          ],
-          hoverOffset: 2,
-        },
-      ],
-    },
-    options: {
-      radius: 110,
-    },
-  });
-</script>
+
+  <!-- <script src="../js/main.js"></script> -->
+  <script src="../js/chart.js"> </script>
 
 </html>
