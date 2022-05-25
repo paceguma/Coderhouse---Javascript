@@ -1,74 +1,64 @@
 @font-face {
     font-family: "Helvetica Compressed";
-    src: url("../fonts/helveticaComp.ttf"), 
-    local("helveticaComp"), 
-    format("truetype");  
+    src: url("../fonts/helveticaComp.ttf"),
+      local("helveticaComp"),
+      format("truetype");
     font-style: normal;
     font-weight: normal;
   }
-
-:root {
+  
+  :root {
     --backGroundColor: #222126;
     --turquoiseColor: #03c1ab;
     --violetColor: #480d83;
-    --redOrangeColor: #df3838;
+    --redOrangeColor: #F69B11;
     --wordsColors: #ffffff;
+    --greyColor: #C4C4C4;
+    --greenColor: #32F611;
+    --pinkColor: #F611C4;
     --fontFamily: "Helvetica Compressed";
-}
-
-
-*,
-*::before,
-*::after {
+  }
+  
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
     margin: 0;
     font-family: "Helvetica Compressed";
-}
+  }
 
 
-
-
-
-.body {
-    background-image: url('../img/fondo.jpeg');
+ .container {
+    background-color: #480D83;
     display: flex;
-    align-content: center;
-    justify-content: center;
+    width: 1200px;
+    border-radius: 8px;
+
+}
+.containerImg{
+    width: 464px;
+    height: 600px;
+    background-image: url(../img/login.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 0 0 8px;
 }
 
 .title {
     color: white;
     font-weight: 400;
     font-size: 64px;
-    font-family: 'Helvetica';
-}
-
-.container {
-    background-color: #480D83;
-    display: flex;
-    margin-top: 100px;
-    width: 1200px;
-    height: 750px;
-    border-radius: 8px;
-
-}
-
-.containerImg {
-    width: 50%;
-    max-height: 750px;
-    background-image: url(../img/login.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
+    text-transform: uppercase;
 }
 
 .containerLogin {
-    width: 50%;
-    text-align: center;
-
-
-}
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    }
 
 .login-register {
     display: flex;
@@ -77,55 +67,42 @@
     margin: 20px auto;
 }
 
-.login {
+.button-a{
+    color: var(--wordsColors);    
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     border: none;
     background-color: transparent;
-
 }
 
-.login a {
+.button-a a{
     text-decoration: none;
-    color: white;
-    font-size: 24px;
 }
 
-.register {
-    border: none;
-    background-color: transparent;
-
-}
-
-.register a {
+.button-a :hover {
     text-decoration: none;
-    color: white;
-    font-size: 24px;
-}
-
-.register a:hover {
-    text-decoration: none;
-    color: #03c1ab;
-    font-size: 24px;
+    color: var(--turquoiseColor);
     transition: all ease-in .2s;
 }
 
-.login a:hover {
-    text-decoration: none;
-    color: #03c1ab;
-    font-size: 24px;
-    transition: all ease-in .2s;
+.container-input{
+    margin: 0 0 16px 0;
 }
 
-.containerInput input {
-    width: 320px;
-    height: 40px;
-    margin-top: 10px;
+.container-input input {
+    width: 300px;
+    height: 50px;
     color: white;
-    background-color: #480D83;
-    border: 1px solid white;
+    background-color: transparent;    
+    border: 1px solid var(--wordsColors);
     border-radius: 8px;
+    font-size: 16px;
+    font-family: helvetica;
+    padding: 0 0 0 8px;
 }
 
-.containerInput input::placeholder {
+.container-input input::placeholder {
     padding-left: 10px;
     margin-left: 50px;
     color: white;
@@ -134,11 +111,12 @@
 
 
 
-.containerInput .color {
-    color: white;
-    font-size: 25px;
-    margin-right: 10px;
+.container-input .color {
+    color: var(--wordsColors);
+    width: 36px;
+    height: 36px;
 }
+
 
 .containerCheckbox {
     display: flex;
@@ -173,4 +151,4 @@
 .btn:hover {
     transition: all ease-in .2s;
     background: linear-gradient(10deg, #03C1AB, #480D83);
-}
+} 

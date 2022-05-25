@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login-register.css">
-    <script src="https://kit.fontawesome.com/c76c7f2890.js" crossorigin="anonymous"></script>
-    <title>Document</title>
-</head>
-<body class="body">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login-register.css" />
+    <script
+      src="https://kit.fontawesome.com/c76c7f2890.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>login</title>
+  </head>
+  <body class="body">
     <div class="container">
-        <div class="containerImg">
+                    
+                <div class="containerImg"></div>
 
-        </div>
-        <div class="containerLogin">
-            <h2 class="title">Take the first step</h2>
-            <div class="login-register">
+                <div class="containerLogin">
+                        <h2 class="title">Take the first step</h2>
+                        <div class="login-register">
+                            <button class="button-a"><a href="./login.html">Sign in</a></button>
+                            <button class="button-a"> <a href="./registro.html">Register</a>                </button>
+                        </div>
 
-                <button class="login"><a href="./login.html">Sign in</a></button>
-                <button class="register"><a href="./registro.html">Register</a></button>
-            </div>
-            <div>
-                <div class="containerInput">
-                    <i class="far color fa-envelope"></i>
-                    <input id="usuario" type="usuario" class="inputText" placeholder="Tu Usuario" />
+                        <div class="container-input-general">
+                                    <div class="container-input">
+                                        <i class="far color fa-envelope"></i>
+                                        <input
+                                        id="user"
+                                        type="user"
+                                        class="inputText"
+                                        placeholder="Email"
+                                        />
+                                    </div>
 
+                                    <div class="container-input">
+                                        <i class="fa-solid color fa-lock"></i>
+                                        <input
+                                        id="pass"
+                                        type="password"
+                                        class="inputText"
+                                        placeholder="Password"
+                                        />
+                                    </div>
+                        </div>
+
+                        <div class="containerCheckbox">
+                        <div>
+                            <input type="checkbox" name="checkbox" id="checkbox" />
+                            <label for="">Remember me</label>
+                        </div>
+                        <a href="#">I forgot my pass</a>
+                        </div>
+
+                        <button class="btn" onclick="guardarUsuario(usuario.value, pass.value)">
+                        Iniciar sesión
+                        </button>
                 </div>
-
-                <div class="containerInput">
-
-                    <i class="fa-solid color fa-lock"></i>
-                    <input id="pass" type="password" class="inputText" placeholder="Password" />
-
-                </div>
-
-            </div>
-
-            <div class="containerCheckbox">
-
-                <div>
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    <label for="">Remember me</label>
-                </div>
-                <a href="#">I forgot my pass</a>
-            </div>
-
-            <button class="btn" onclick="guardarUsuario(usuario.value, pass.value)">Iniciar sesión</button>
-
-
-        </div>
-
     </div>
+  </body>
 
-</body>
-
-<script src="../js/main.js"></script>
-
+  <script src="../js/main.js"></script>
 </html>
