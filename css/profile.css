@@ -474,9 +474,25 @@ hr {
   margin: 8px 16px 8px 0;
 }
 
-.gym-class-onmouseenter{
-  background-color: rgb(229, 76, 99);
+.gym-class-onclick-power-stretching{
+  background-color: var(--violetColor)
 }
+.gym-class-onclick-abs{
+  background-color: var(--redOrangeColor)
+}
+.gym-class-onclick-step{
+  background-color: var(--pinkColor)
+}
+.gym-class-onclick-zumba{
+  background-color: var(--turquoiseColor)
+}
+.gym-class-onclick-cardio{
+  background-color: var(--greyColor)
+}
+.gym-class-onclick-aerobox{
+  background-color: var(--greenColor)
+}
+
 
 .gym-class {
   width: 190px;

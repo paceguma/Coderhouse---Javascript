@@ -61,7 +61,7 @@
 // }
 
 
-// const bienvenida = document.getElementById("welcomeH3");
+// const bienvenida = document.getElementById("welcomeH2");
 // let usuarioStorage = localStorage.getItem("usuario");
 // bienvenida.innerHTML =
 //     "Bienvenido/a" + " " + `<strong>${usuarioStorage}</strong>`;
@@ -122,12 +122,11 @@
 
 
 
-// Functions to appointment class
+/***************** OPEN CARD PRICES  ************/
 
 const plus = document.querySelector("#plus");
 const sectionPrices = document.querySelector("#section-prices")
 
-/****************** OPEN SHOP **********************/
 plus.addEventListener("click", ()=> {
     if (sectionPrices.classList.contains("prices")){
         sectionPrices.classList.remove("prices")
@@ -136,38 +135,28 @@ plus.addEventListener("click", ()=> {
     }
 })
 
-
-
-
-/****************** TOTAL PRICE **********************/
-
-/****************** DELETE ITEMS **********************/
-
-/****************** MODIFICATE BUTTON **********************/
-
 /****************** BUY **********************/
+
 const credits = document.querySelector(".active-pass-credits")
 const activePass = document.querySelector(".active-pass")
 const creditsAvailable = document.querySelector(".active-pass-p")
 
 function agregarCreditos(e){
-let respuesta = prompt("Seguro que quieres comprar este plan?")
+let respuesta = prompt("Do you want to buy this plan?")
 
-if(respuesta === "si") {
+if(respuesta === "yes") {
     credits.innerHTML =
     `${e.target.parentElement.children[1].children[1].textContent}`;
     activePass.innerHTML = 
     `${e.target.parentElement.children[1].children[0].textContent}`;
     creditsAvailable.innerHTML = "Credits Available"
 } else {
-    credits.innerHTML = `<p class="letraDelPlan">No tienes creditos</p>`
+    credits.innerHTML = `<p class="letraDelPlan">No credits</p>`
 }
- 
-}
+ }
 
 
-
-/******************* BUTTON CALENDAR  ************************/
+/******************* BUTTON CALENDAR / ADD CLASS ************************/
 const buttonColor = document.querySelectorAll(".gym-class");
 const containerClass = document.querySelector(".container-class")
 function backgroundCalendarActivities(e) {
@@ -176,8 +165,30 @@ function backgroundCalendarActivities(e) {
     for (let i = 0; i < buttonColor.length; i++){
        let auxiliar = buttonColor[i];
         auxiliar.addEventListener("click", () => {
+
+            switch (auxiliar.classList) {
+                case "border-power-stretching":
+         auxiliar.classList.add("gym-class-onclick-power-stretching")                
+                    break;
+                case "border-aerobox":
+         auxiliar.classList.add("gym-class-onclick-aerobox")
+                    break;
+                case "border-cardio":
+         auxiliar.classList.add("gym-class-onclick-cardio")
+                    break;
+                case "border-zumba":
+         auxiliar.classList.add("gym-class-onclick-zumba")
+                    break;
+                case "border-abs":
+         auxiliar.classList.add("gym-class-onclick-abs")
+                    break;
+                default:
+        auxiliar.classList.add("gym-class-onclick-step")
+                    break;
+            }
+
             //en esta linea probar el switch de clases de colores
-            auxiliar.classList.add("gym-class-onmouseenter")
+            //auxiliar.classList.add("gym-class-onclick")
         })
     }
     console.log(calendario)
@@ -193,17 +204,7 @@ function backgroundCalendarActivities(e) {
        }
         
     }
-
-
-
-
 }
-
-
-
-
-
-
 
 const calendario = [
     {
@@ -214,16 +215,197 @@ const calendario = [
     },
     {
         id: 2,
-        dia: "monday",
+        dia: "tuesday",
         time: "7am",
         clase: "power-stretching" 
     },
     {
         id: 3,
-        dia: "monday",
+        dia: "wednesday",
         time: "7am",
         clase: "power-stretching" 
-    }
+    },
+    {
+        id: 4,
+        dia: "thursday",
+        time: "7am",
+        clase: "abs" 
+    },
+    {
+        id: 5,
+        dia: "friday",
+        time: "7am",
+        clase: "power-stretching" 
+    },
+    {
+        id: 6,
+        dia: "monday",
+        time: "8am",
+        clase: "abs" 
+    },
+    {
+        id: 7,
+        dia: "tuesday",
+        time: "8am",
+        clase: "step" 
+    },
+    {
+        id: 8,
+        dia: "wednesday",
+        time: "8am",
+        clase: "abs" 
+    },
+    {
+        id: 9,
+        dia: "thursday",
+        time: "8am",
+        clase: "step" 
+    },
+    {
+        id: 10,
+        dia: "friday",
+        time: "8am",
+        clase: "step" 
+    },
+    {
+        id: 11,
+        dia: "thursday",
+        time: "9am",
+        clase: "power-stretching" 
+    },
+    {
+        id: 12,
+        dia: "friday",
+        time: "9am",
+        clase: "abs" 
+    },
+    {
+        id: 13,
+        dia: "tuesday",
+        time: "4.15pm",
+        clase: "power-stretching" 
+    },
+    {
+        id: 14,
+        dia: "thursday",
+        time: "4.15pm",
+        clase: "power-stretching" 
+    },
+    {
+        id: 15,
+        dia: "monday",
+        time: "5.15pm",
+        clase: "step" 
+    },
+    {
+        id: 16,
+        dia: "thursday",
+        time: "5.15pm",
+        clase: "abs" 
+    },
+    {
+        id: 17,
+        dia: "thursday",
+        time: "5.15pm",
+        clase: "step" 
+    },
+    {
+        id: 18,
+        dia: "thursday",
+        time: "5.15pm",
+        clase: "abs" 
+    },
+    {
+        id: 19,
+        dia: "thursday",
+        time: "5.15pm",
+        clase: "abs" 
+    },
+    {
+        id: 20,
+        dia: "monday",
+        time: "6.15pm",
+        clase: "zumba" 
+    },
+    {
+        id: 21,
+        dia: "tuesday",
+        time: "6.15pm",
+        clase: "step" 
+    },
+    {
+        id: 22,
+        dia: "wednesday",
+        time: "6.15pm",
+        clase: "zumba" 
+    },
+    {
+        id: 23,
+        dia: "thursday",
+        time: "6.15pm",
+        clase: "aerobox" 
+    },
+    {
+        id: 24,
+        dia: "friday",
+        time: "6.15pm",
+        clase: "zumba" 
+    },
+    {
+        id: 25,
+        dia: "monday",
+        time: "7.15pm",
+        clase: "cardio" 
+    },
+    {
+        id: 26,
+        dia: "tuesday",
+        time: "7.15pm",
+        clase: "zumba" 
+    },
+    {
+        id: 27,
+        dia: "wednesday",
+        time: "7.15pm",
+        clase: "aerobox" 
+    },
+    {
+        id: 28,
+        dia: "thursday",
+        time: "7.15pm",
+        clase: "cardio" 
+    },
+    {
+        id: 29,
+        dia: "friday",
+        time: "7.15pm",
+        clase: "aerobox" 
+    },
+    {
+        id: 30,
+        dia: "monday",
+        time: "7.15pm",
+        clase: "aerobox" 
+    },
+    {
+        id: 31,
+        dia: "tuesday",
+        time: "7.15pm",
+        clase: "cardio" 
+    },
+    {
+        id: 32,
+        dia: "thursday",
+        time: "7.15pm",
+        clase: "zumba" 
+    },
+    {
+        id: 33,
+        dia: "friday",
+        time: "7.15pm",
+        clase: "cardio" 
+    },
+  
 ]
 /*
 que la funcion, compare el id del elemento al que se le da click
