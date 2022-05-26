@@ -255,6 +255,95 @@ hr {
 
 
 
+/***************** PRICES SECTION *****************/
+.prices {
+  display: none;
+}
+
+.prices.open{
+  display: block;
+}
+
+
+.section-card-prices-h3 {
+  color: var(--wordsColors);
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  font-size: 36px;
+  letter-spacing: 1rem;
+}
+
+.card-prices-icon {
+  padding-top: 50px;
+  width: 48px;
+}
+
+.card-prices-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cards-prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--turquoiseColor);
+  width: 350px;
+  height: 500px;
+  color: var(--wordsColors);
+  border-radius: 8px;
+  align-items: center;
+}
+
+.cards-prices-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-prices h4 {
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.cards-prices h5 {
+  padding-top: 16px;
+  font-family: Helvetica;
+  font-size: 16px;
+  width: 180px;
+  text-align: center;
+}
+
+.cards-prices h6 {
+  padding-top: 16px;
+  font-size: 48px;
+  letter-spacing: 0.2rem;
+}
+
+.cards-prices-button {
+  background-color: var(--turquoiseColor);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  color: var(--wordsColors);
+  margin: 32px;
+  padding: 8px 16px;
+  color: var(--backGroundColor);
+  cursor: pointer;
+}
+
+.cards-prices:hover {
+  background-color: var(--turquoiseColor);
+  border: 1px solid var(--turquoiseColor);
+  transition: all 0.5s;
+  color: var(--backGroundColor);
+}
 
 
 /********************* CALENDAR SECTION **************************/
@@ -385,7 +474,9 @@ hr {
   margin: 8px 16px 8px 0;
 }
 
-
+.gym-class-onmouseenter{
+  background-color: rgb(229, 76, 99);
+}
 
 .gym-class {
   width: 190px;
@@ -619,4 +710,14 @@ footer {
   font-size: 12px;
   font-family: helvetica;
 
+}
+
+
+
+
+
+
+
+.letraDelPlan {
+  font-size: 24px;
 }

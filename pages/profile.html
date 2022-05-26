@@ -37,9 +37,9 @@
 
       <div class="pass-background">
         <div class="pass-credits-available">
-          <p class="active-pass-credits">57</p>
-          <p class="active-pass-p">Credits available</p>
-          <p class="active-pass">Free Pass</p>
+          <p class="active-pass-credits"></p>
+          <p class="active-pass-p">No Credits available</p>
+          <p class="active-pass"></p>
         </div>
 
         <div class="pass-history">
@@ -51,7 +51,7 @@
             <span>24/5/2022</span>
           </div>
         </div>
-        <div class="pass-button-plus"> <button class="active-pass-button-plus">+</button></div>
+        <div id="plus" class="pass-button-plus"> <button class="active-pass-button-plus">+</button></div>
 
       </div>
 
@@ -87,6 +87,48 @@
 
     </div>
   </section>
+
+  <section id="section-prices" class="prices">
+    <h3 class="section-card-prices-h3">Select one plan per month</h3>
+
+    <div class="card-prices-container">
+
+      <div class="cards-prices">
+        <div> <img class="card-prices-icon" src="../img/icon-basic-plan.png" alt="" /> </div>
+        <div class="cards-prices-info">
+          <h4>Basics</h4>
+          <h5>16</h5>
+          <h5>Included 8 gym class and 8 sala class</h5>
+          <h6>$ <span class="spanPrice">1400</span></h6>
+        </div>
+        <button onclick="agregarCreditos(event)" class="cards-prices-button">Let's go</button>
+      </div>
+
+      <div class="cards-prices">
+        <div> <img class="card-prices-icon" src="../img/icon-intermediate-plan.png" alt="" /> </div>
+        <div class="cards-prices-info">
+          <h4>Intermediate</h4>
+          <h5>24</h5>
+          <h5>Included 12 gym class and 12 sala class</h5>
+          <h6>$ <span class="spanPrice">2000</span></h6>
+        </div>
+        <button onclick="agregarCreditos(event)" class="cards-prices-button">Let's go</button>
+      </div>
+
+      <div class="cards-prices">
+        <div> <img class="card-prices-icon" src="../img/icon-freePass-plan.png" alt="" />
+        </div>
+        <div class="cards-prices-info"">
+                            <h4>Free pass</h4>
+                            <h5>Unlimited</h5>
+                            <h5>Included all gym class and all sala class</h5>
+                            <h6>$<span class="spanPrice"> 2500</span></h6>
+                          </div>
+                          <button onclick="agregarCreditos(event)" class=" cards-prices-button">Let's go</button>
+        </div>
+      </div>
+  </section>
+
 
   <section class="timetable-chart">
     <div class="calendar-title">
@@ -131,7 +173,7 @@
             </div>
             <div class="calendar-days-activities">
               <div class="container">
-                <div class="gym-class border-power-stretching">
+                <div id="1" onclick="backgroundCalendarActivities(event)" class="gym-class border-power-stretching">
                   <div class="rectangule-power-stretching"></div> Power-stretching
                 </div>
                 <div class="gym-class border-power-stretching">
@@ -339,7 +381,7 @@
 
 </body>
 
-<!-- <script src="../js/main.js"></script> -->
+<script src="../js/main.js"></script>
 <script src="../js/chart.js"> </script>
 
 </html>
