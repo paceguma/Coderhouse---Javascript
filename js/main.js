@@ -18,7 +18,7 @@ const getData = async () => {
             <div class="professor-name">
                  <h5 class="professor-name-h5">${data.professor[i].name} </h5>
             </div>
-        <div class="professor-img">${data.professor[i].biography}</div>
+        <img src="../img/${data.professor[i].photo}"class="professor-img">
 
         `;
 
@@ -55,44 +55,44 @@ getData();
 
 // Register and login
 
-// function registrarUsuario(nombreRegistro, emailRegistro, contraseñaRegistro) {
-//     let validacion = true;
-//     localStorage.setItem("usuario", nombreRegistro.trim()); //setItem almacena el usuario en la posición "usuario"
-//     localStorage.setItem("password", contraseñaRegistro.trim()); // Almaceno la contraseña
-//     if (
-//         emailRegistro.value === "" ||
-//         contraseñaRegistro.value === "" ||
-//         nombreRegistro.value === ""
-//     ) {
-//         alert("Complete todos los campos para registrarse");
-//         validacion = false;
-//     }
-//     if (validacion) {
-//         location.href = "login.html";
-//     }
-// }
+function registrarUsuario(nombreRegistro, emailRegistro, contraseñaRegistro) {
+    let validacion = true;
+    localStorage.setItem("usuario", nombreRegistro.trim()); //setItem almacena el usuario en la posición "usuario"
+    localStorage.setItem("password", contraseñaRegistro.trim()); // Almaceno la contraseña
+    if (
+        emailRegistro.value === "" ||
+        contraseñaRegistro.value === "" ||
+        nombreRegistro.value === ""
+    ) {
+        alert("Complete todos los campos para registrarse");
+        validacion = false;
+    }
+    if (validacion) {
+        location.href = "profile.html";
+    }
+}
 
-// const bienvenida = document.getElementById("welcomeH2");
-// let usuarioStorage = localStorage.getItem("usuario");
-// bienvenida.innerHTML =
-//     "Bienvenido/a" + " " + `<strong>${usuarioStorage}</strong>`;
+const bienvenida = document.getElementById("welcomeH2");
+let usuarioStorage = localStorage.getItem("usuario");
+bienvenida.innerHTML =
+    "Bienvenido/a" + " " + `<strong>${usuarioStorage}</strong>`;
 
-// function guardarUsuario(usuario, pass) {
-//     if (usuario.trim() === "" || pass.trim() === "") {
-//         //Chequea que el usuario recibido no esté vacío.
-//         //El método trim elimina los espacios en blanco al inicio y al final del mismo.
-//         alert("El usuario está vacío o los datos son incorrectos");
-//     } else {
-//         let usuarioStorage = localStorage.getItem("usuario");
-//         let passwordStorage = localStorage.getItem("password");
+function guardarUsuario(usuario, pass) {
+    if (usuario.trim() === "" || pass.trim() === "") {
+        //Chequea que el usuario recibido no esté vacío.
+        //El método trim elimina los espacios en blanco al inicio y al final del mismo.
+        alert("El usuario está vacío o los datos son incorrectos");
+    } else {
+        let usuarioStorage = localStorage.getItem("usuario");
+        let passwordStorage = localStorage.getItem("password");
 
-//         if (usuario === usuarioStorage && passwordStorage === pass) {
-//             alert(" Bienvenido/a :" + " " + usuario);
+        if (usuario == usuarioStorage && passwordStorage == pass) {
+            alert(" Bienvenido/a :" + " " + usuario);
 
-//             location.href = "profile.html";
-//         }
-//     }
-// }
+            location.href = "profile.html";
+        }
+    }
+}
 
 // Función que agregaría al créditos según el plan elegido
 
@@ -150,19 +150,37 @@ const activePass = document.querySelector(".active-pass");
 const creditsAvailable = document.querySelector(".active-pass-p");
 
 function agregarCreditos(e) {
-    let respuesta = prompt("Do you want to buy this plan?");
+    Swal.fire({
+        title: 'Seguro que quieres comprar este plan?',
+        text: "Se te debitara en el proximo mes",
+        
+        showCancelButton: true,
+        confirmButtonColor: 'green',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, comprar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Comprado!',
+            'Tu plan fue comprado con exito.'
+            
+          )
+        }
+        if (result.isConfirmed) {
+            credits.innerHTML = `${e.target.parentElement.children[1].children[1].textContent}`;
+            activePass.innerHTML = `${e.target.parentElement.children[1].children[0].textContent}`;
+            creditsAvailable.innerHTML = "Credits Available";
+        } else {
+            credits.innerHTML = `<p class="letraDelPlan">No credits</p>`;
+        }
+      })
 
-    if (respuesta === "yes") {
-        credits.innerHTML = `${e.target.parentElement.children[1].children[1].textContent}`;
-        activePass.innerHTML = `${e.target.parentElement.children[1].children[0].textContent}`;
-        creditsAvailable.innerHTML = "Credits Available";
-    } else {
-        credits.innerHTML = `<p class="letraDelPlan">No credits</p>`;
-    }
+    
 }
 
 /******************* BUTTON CALENDAR / ADD CLASS ************************/
-
+const containerClass = document.querySelector(".container-class");
+const divGymClass = document.querySelectorAll(".gym-class")
 const aux = [];
 function backgroundCalendarActivities(e) {
     let auxiliar = e.target.classList[1];
@@ -194,6 +212,8 @@ function backgroundCalendarActivities(e) {
             break;
     }
 
+
+
     for (let i = 0; i < calendario.length; i++) {
         if (e.target.id == calendario[i].id) {
             if (aux.length <= 4) {
@@ -201,10 +221,9 @@ function backgroundCalendarActivities(e) {
                     aux.push(calendario[i]);
                     let divAuxiliar = document.createElement("div");
                     let htmlContentToAppend = "";
-
                     for (let i = 0; i < aux.length; i++) {
                         htmlContentToAppend = ` <div id=${aux[i].id} class="widthDiv">
-                <p>${aux[i].dia}</p>         
+                <p class="pDay">${aux[i].dia}</p>         
                 <p>${aux[i].time}</p>
                  <p>${aux[i].clase}</p>
                </div>
@@ -212,14 +231,27 @@ function backgroundCalendarActivities(e) {
                         divAuxiliar.innerHTML = htmlContentToAppend;
 
                         containerClass.append(divAuxiliar);
+                    
                     }
                 }
             }
         }
     }
+    
+       
+    
 }
 
-const containerClass = document.querySelector(".container-class");
+
+
+
+
+
+
+
+
+
+
 
 const calendario = [
     {

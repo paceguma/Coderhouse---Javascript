@@ -6,6 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/login-register.css" />
+  <script
+    src="https://kit.fontawesome.com/c76c7f2890.js"
+    crossorigin="anonymous"
+  ></script>
+
   <title>GymNess</title>
 </head>
 
@@ -13,7 +19,8 @@
   <header class="header">
     <nav class="navBar">
       <div class="login">
-        <button class="buttonLogin"><a href="./login.html">Login</a></button>
+        <button id="myBtn" class="buttonLogin"><a href="#">Login</a></button>
+        <button id="myBtnModal2" class="button-a"> <a href="#">Register</a>                </button>
         <hr />
       </div>
       <div class="navegation">
@@ -24,9 +31,7 @@
           <a href="#">Price</a>
           <a href="#">Contact</a>
         </div>
-        <div>
-          <button class="buttonRegister"> <a href="./register.html">Join now</a> </button>
-        </div>
+       
       </div>
     </nav>
   </header>
@@ -46,8 +51,120 @@
 
   <section class="activities">
     <h3 class="activities-h3">Our Activities</h3>
+    <div id="myModal" class="modal">
 
-
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+       <div class="body">
+          <div class="container">
+                          
+                      <div class="containerImg"></div>
+      
+                      <div class="containerLogin">
+                              <h2 class="title">Take the first step</h2>
+                              <div class="login-register">
+                                  <button class="button-a"><a href="#">Sign in</a></button>
+                                  <button id="myBtnModal2" class="button-a"> <a href="#">Register</a>                </button>
+                              </div>
+      
+                              <div class="container-input-general">
+                                          <div class="container-input">
+                                              <i class="far color fa-envelope"></i>
+                                              <input
+                                              id="user"
+                                              type="user"
+                                              class="inputText"
+                                              placeholder="Email"
+                                              />
+                                          </div>
+      
+                                          <div class="container-input">
+                                              <i class="fa-solid color fa-lock"></i>
+                                              <input
+                                              id="pass"
+                                              type="password"
+                                              class="inputText"
+                                              placeholder="Password"
+                                              />
+                                          </div>
+                              </div>
+      
+                              <div class="containerCheckbox">
+                              <div>
+                                  <input type="checkbox" name="checkbox" id="checkbox" />
+                                  <label for="">Remember me</label>
+                              </div>
+                              <a href="#">I forgot my pass</a>
+                              </div>
+      
+                              <button class="btn" onclick="guardarUsuario(user.value, pass.value)">
+                              Iniciar sesión
+                              </button>
+                      </div>
+          </div>
+        </div>
+      </div>
+     
+    
+    </div>
+  <!-- Modal2 content -->
+       <div id="myModal2" class="modal2">
+          <div class="modal-content">
+          <span class="close2">&times;</span>
+          <div class="body">
+            <div class="container">
+              <div class="containerImg"></div>
+              <div class="containerLogin">
+                <h2 class="title">Registro</h2>
+                <div class="login-register">
+                  <button class="login"><a href="./login.html">SIGN IN</a></button>
+                  <button class="register">
+                    <a href="./registro.html">REGISTER</a>
+                  </button>
+                </div>
+                <div>
+                  <div class="containerInput">
+                    <i class="fa-solid color fa-user"></i>
+                    <input id="nombreRegistro" type="text" placeholder="Name" />
+                  </div>
+        
+                  <div class="containerInput">
+                    <i class="far color fa-envelope"></i>
+        
+                    <input id="emailRegistro" type="email" placeholder="Email" />
+                  </div>
+        
+                  <div class="containerInput">
+                    <i class="fa-solid color fa-lock"></i>
+                    <input
+                      id="contraseñaRegistro"
+                      type="password"
+                      placeholder="Password"
+                    />
+                  </div>
+                </div>
+        
+                <div class="containerCheckbox">
+                  <div>
+                    <input type="checkbox" name="checkbox" id="checkbox" />
+                    <label for="">Remember me</label>
+                  </div>
+                  <a href="#">I forgot my pass</a>
+                </div>
+        
+                <button
+                  class="btn"
+                  onclick="registrarUsuario(nombreRegistro.value, emailRegistro.value, contraseñaRegistro.value)"
+                >
+                  Registrarse
+                </button>
+              </div>
+            </div>
+          </div>
+          </div>
+       </div>
+      
     <div class="activitiesContainer">
 
       <div class="cardsActivities">
@@ -221,7 +338,7 @@
           <div class="gym-hour">9am</div>
         </div>
         <div class="calendar-days-activities">
-          <div class="container">
+          <div class="container-calendar">
             <div class="gym-class border-power-stretching">
               <div class="rectangule-power-stretching"></div> Power-stretching
             </div>
@@ -238,7 +355,7 @@
               <div class="rectangule-power-stretching"></div> Power-stretching
             </div>
           </div>
-          <div class="container">
+          <div class="container-calendar">
             <div class="gym-class border-abs">
               <div class="rectangule-abs"></div> Abs
             </div>
@@ -255,7 +372,7 @@
               <div class="rectangule-step"></div> Step
             </div>
           </div>
-          <div class="container">
+          <div class="container-calendar">
             <div class="gym-class"></div>
             <div class="gym-class"></div>
             <div class="gym-class"></div>
@@ -287,7 +404,7 @@
 
 
         <div class="calendar-days-activities">
-          <div class="container">
+          <div class="container-calendar">
             <div class="gym-class"></div>
             <div class="gym-class border-power-stretching">
               <div class="rectangule-power-stretching"></div> Power-stretching
@@ -298,7 +415,7 @@
             </div>
             <div class="gym-class"></div>
           </div>
-          <div class="container">
+          <div class="container-calendar">
             <div class="gym-class border-step">
               <div class="rectangule-step"></div> Step
             </div>
@@ -315,7 +432,7 @@
               <div class="rectangule-abs"></div> Abs
             </div>
           </div>
-          <div class="container">
+          <div class="container-calendar">
             <div class="gym-class border-zumba">
               <div class="rectangule-zumba"></div> Zumba
             </div>
@@ -332,7 +449,7 @@
               <div class="rectangule-zumba"></div> Zumba
             </div>
           </div>
-          <div class="container">
+          <div class="container-calendar">
             <div class="gym-class border-cardio">
               <div class="rectangule-cardio"></div> Cardio
             </div>
@@ -349,7 +466,7 @@
               <div class="rectangule-aerobox"></div> Aerobox
             </div>
           </div>
-          <div class="container">
+          <div class="container-calendar">
             <div class="gym-class border-aerobox">
               <div class="rectangule-aerobox"></div> Aerobox
             </div>
@@ -407,5 +524,40 @@
   </footer>
 </body>
 <script src="../js/main.js"></script>
-
+<script>
+  // Get the modal
+var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtnModal2");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+</script>
 </html>
