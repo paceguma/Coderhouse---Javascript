@@ -1,20 +1,34 @@
+const coachContainer = document.getElementById("coachContainer");
+const professor = [];
+const getData = async () => {
+    await fetch("./data.json")
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            for (let i = 0; i < data.professor.length; i++) {
+             
+                let divCoach = document.createElement("div");
+                let htmlContentToAppend = "";
+                htmlContentToAppend = ` 
+        <div class="professor">
+            <div class="professor-coach">
+                <h4 class="professor-coach-h4">Coach</h4>
+            </div>
+            <div class="professor-name">
+                 <h5 class="professor-name-h5">${data.professor[i].name} </h5>
+            </div>
+        <div class="professor-img">${data.professor[i].biography}</div>
 
+        `;
 
+divCoach.innerHTML = htmlContentToAppend;
+coachContainer.append(divCoach);
+            }
+        });
+};
+getData();
 
-// Variables, arrays 
-// const activities = []
-// const getData = async () => {
-//     await fetch('./data.json').then(res => {
-//         return res.json()
-//     }).then((data) => {
-//         for (let i = 0; i < data.activities.length; i++) {
-
-//             activities.push(data.activities[i])
-//         }
-//     })
-// }
-// getData()
-// console.log(activities)
 
 // const plans = [
 //     {
@@ -37,8 +51,6 @@
 //     },
 // ]
 
-
-
 // Functions
 
 // Register and login
@@ -59,7 +71,6 @@
 //         location.href = "login.html";
 //     }
 // }
-
 
 // const bienvenida = document.getElementById("welcomeH2");
 // let usuarioStorage = localStorage.getItem("usuario");
@@ -84,7 +95,6 @@
 // }
 
 // Función que agregaría al créditos según el plan elegido
-
 
 // let purchase = prompt(`cúal pase queres comprar? basics, intermediate or free Pass`).toLowerCase();
 // let credit = 0;
@@ -120,297 +130,299 @@
 // }
 // categoriesFilter()
 
-
-
 /***************** OPEN CARD PRICES  ************/
 
 const plus = document.querySelector("#plus");
-const sectionPrices = document.querySelector("#section-prices")
+const sectionPrices = document.querySelector("#section-prices");
 
-plus.addEventListener("click", ()=> {
-    if (sectionPrices.classList.contains("prices")){
-        sectionPrices.classList.remove("prices")
-    }else {
-        sectionPrices.classList.add("prices-open")
+plus.addEventListener("click", () => {
+    if (sectionPrices.classList.contains("prices")) {
+        sectionPrices.classList.remove("prices");
+    } else {
+        sectionPrices.classList.add("prices-open");
     }
-})
+});
 
 /****************** BUY **********************/
 
-const credits = document.querySelector(".active-pass-credits")
-const activePass = document.querySelector(".active-pass")
-const creditsAvailable = document.querySelector(".active-pass-p")
+const credits = document.querySelector(".active-pass-credits");
+const activePass = document.querySelector(".active-pass");
+const creditsAvailable = document.querySelector(".active-pass-p");
 
-function agregarCreditos(e){
-let respuesta = prompt("Do you want to buy this plan?")
+function agregarCreditos(e) {
+    let respuesta = prompt("Do you want to buy this plan?");
 
-if(respuesta === "yes") {
-    credits.innerHTML =
-    `${e.target.parentElement.children[1].children[1].textContent}`;
-    activePass.innerHTML = 
-    `${e.target.parentElement.children[1].children[0].textContent}`;
-    creditsAvailable.innerHTML = "Credits Available"
-} else {
-    credits.innerHTML = `<p class="letraDelPlan">No credits</p>`
+    if (respuesta === "yes") {
+        credits.innerHTML = `${e.target.parentElement.children[1].children[1].textContent}`;
+        activePass.innerHTML = `${e.target.parentElement.children[1].children[0].textContent}`;
+        creditsAvailable.innerHTML = "Credits Available";
+    } else {
+        credits.innerHTML = `<p class="letraDelPlan">No credits</p>`;
+    }
 }
- }
-
 
 /******************* BUTTON CALENDAR / ADD CLASS ************************/
-const buttonColor = document.querySelectorAll(".gym-class");
-const containerClass = document.querySelector(".container-class")
+
+const aux = [];
 function backgroundCalendarActivities(e) {
-    console.log(e.target.id)
+    let auxiliar = e.target.classList[1];
+    console.log(e.target.classList[1]);
+    switch (auxiliar) {
+        case "border-power-stretching":
+            e.target.classList.toggle("gym-class-onclick-power-stretching");
 
-    for (let i = 0; i < buttonColor.length; i++){
-       let auxiliar = buttonColor[i];
-        auxiliar.addEventListener("click", () => {
+            break;
+        case "border-aerobox":
+            e.target.classList.toggle("gym-class-onclick-aerobox");
 
-            switch (auxiliar.classList) {
-                case "border-power-stretching":
-         auxiliar.classList.add("gym-class-onclick-power-stretching")                
-                    break;
-                case "border-aerobox":
-         auxiliar.classList.add("gym-class-onclick-aerobox")
-                    break;
-                case "border-cardio":
-         auxiliar.classList.add("gym-class-onclick-cardio")
-                    break;
-                case "border-zumba":
-         auxiliar.classList.add("gym-class-onclick-zumba")
-                    break;
-                case "border-abs":
-         auxiliar.classList.add("gym-class-onclick-abs")
-                    break;
-                default:
-        auxiliar.classList.add("gym-class-onclick-step")
-                    break;
-            }
+            break;
+        case "border-cardio":
+            e.target.classList.toggle("gym-class-onclick-cardio");
 
-            //en esta linea probar el switch de clases de colores
-            //auxiliar.classList.add("gym-class-onclick")
-        })
+            break;
+        case "border-zumba":
+            e.target.classList.toggle("gym-class-onclick-zumba");
+
+            break;
+        case "border-abs":
+            e.target.classList.toggle("gym-class-onclick-abs");
+
+            break;
+        default:
+            e.target.classList.toggle("gym-class-onclick-step");
+
+            break;
     }
-    console.log(calendario)
+
     for (let i = 0; i < calendario.length; i++) {
-       if(e.target.id == calendario[i].id){
-          containerClass.innerHTML = `
-    <div>
-        <p>${calendario[i].dia}</p>
-        <p>${calendario[i].time}</p>
-        <p>${calendario[i].clase}</p>
-    </div>
-` 
-       }
-        
+        if (e.target.id == calendario[i].id) {
+            if (aux.length <= 4) {
+                if (!aux.includes(calendario[i])) {
+                    aux.push(calendario[i]);
+                    let divAuxiliar = document.createElement("div");
+                    let htmlContentToAppend = "";
+
+                    for (let i = 0; i < aux.length; i++) {
+                        htmlContentToAppend = ` <div id=${aux[i].id} class="widthDiv">
+                <p>${aux[i].dia}</p>         
+                <p>${aux[i].time}</p>
+                 <p>${aux[i].clase}</p>
+               </div>
+               `;
+                        divAuxiliar.innerHTML = htmlContentToAppend;
+
+                        containerClass.append(divAuxiliar);
+                    }
+                }
+            }
+        }
     }
 }
+
+const containerClass = document.querySelector(".container-class");
 
 const calendario = [
     {
         id: 1,
         dia: "monday",
         time: "7am",
-        clase: "power-stretching" 
+        clase: "power-stretching",
     },
     {
         id: 2,
         dia: "tuesday",
         time: "7am",
-        clase: "power-stretching" 
+        clase: "power-stretching",
     },
     {
         id: 3,
         dia: "wednesday",
         time: "7am",
-        clase: "power-stretching" 
+        clase: "power-stretching",
     },
     {
         id: 4,
         dia: "thursday",
         time: "7am",
-        clase: "abs" 
+        clase: "abs",
     },
     {
         id: 5,
         dia: "friday",
         time: "7am",
-        clase: "power-stretching" 
+        clase: "power-stretching",
     },
     {
         id: 6,
         dia: "monday",
         time: "8am",
-        clase: "abs" 
+        clase: "abs",
     },
     {
         id: 7,
         dia: "tuesday",
         time: "8am",
-        clase: "step" 
+        clase: "step",
     },
     {
         id: 8,
         dia: "wednesday",
         time: "8am",
-        clase: "abs" 
+        clase: "abs",
     },
     {
         id: 9,
         dia: "thursday",
         time: "8am",
-        clase: "step" 
+        clase: "step",
     },
     {
         id: 10,
         dia: "friday",
         time: "8am",
-        clase: "step" 
+        clase: "step",
     },
     {
         id: 11,
         dia: "thursday",
         time: "9am",
-        clase: "power-stretching" 
+        clase: "power-stretching",
     },
     {
         id: 12,
         dia: "friday",
         time: "9am",
-        clase: "abs" 
+        clase: "abs",
     },
     {
         id: 13,
         dia: "tuesday",
         time: "4.15pm",
-        clase: "power-stretching" 
+        clase: "power-stretching",
     },
     {
         id: 14,
         dia: "thursday",
         time: "4.15pm",
-        clase: "power-stretching" 
+        clase: "power-stretching",
     },
     {
         id: 15,
         dia: "monday",
         time: "5.15pm",
-        clase: "step" 
+        clase: "step",
     },
     {
         id: 16,
         dia: "thursday",
         time: "5.15pm",
-        clase: "abs" 
+        clase: "abs",
     },
     {
         id: 17,
         dia: "thursday",
         time: "5.15pm",
-        clase: "step" 
+        clase: "step",
     },
     {
         id: 18,
         dia: "thursday",
         time: "5.15pm",
-        clase: "abs" 
+        clase: "abs",
     },
     {
         id: 19,
         dia: "thursday",
         time: "5.15pm",
-        clase: "abs" 
+        clase: "abs",
     },
     {
         id: 20,
         dia: "monday",
         time: "6.15pm",
-        clase: "zumba" 
+        clase: "zumba",
     },
     {
         id: 21,
         dia: "tuesday",
         time: "6.15pm",
-        clase: "step" 
+        clase: "step",
     },
     {
         id: 22,
         dia: "wednesday",
         time: "6.15pm",
-        clase: "zumba" 
+        clase: "zumba",
     },
     {
         id: 23,
         dia: "thursday",
         time: "6.15pm",
-        clase: "aerobox" 
+        clase: "aerobox",
     },
     {
         id: 24,
         dia: "friday",
         time: "6.15pm",
-        clase: "zumba" 
+        clase: "zumba",
     },
     {
         id: 25,
         dia: "monday",
         time: "7.15pm",
-        clase: "cardio" 
+        clase: "cardio",
     },
     {
         id: 26,
         dia: "tuesday",
         time: "7.15pm",
-        clase: "zumba" 
+        clase: "zumba",
     },
     {
         id: 27,
         dia: "wednesday",
         time: "7.15pm",
-        clase: "aerobox" 
+        clase: "aerobox",
     },
     {
         id: 28,
         dia: "thursday",
         time: "7.15pm",
-        clase: "cardio" 
+        clase: "cardio",
     },
     {
         id: 29,
         dia: "friday",
         time: "7.15pm",
-        clase: "aerobox" 
+        clase: "aerobox",
     },
     {
         id: 30,
         dia: "monday",
         time: "7.15pm",
-        clase: "aerobox" 
+        clase: "aerobox",
     },
     {
         id: 31,
         dia: "tuesday",
         time: "7.15pm",
-        clase: "cardio" 
+        clase: "cardio",
     },
     {
         id: 32,
         dia: "thursday",
         time: "7.15pm",
-        clase: "zumba" 
+        clase: "zumba",
     },
     {
         id: 33,
         dia: "friday",
         time: "7.15pm",
-        clase: "cardio" 
+        clase: "cardio",
     },
-  
-]
+];
 /*
 que la funcion, compare el id del elemento al que se le da click
 recorriendo el array y comparando con cual coincide, de ser asi
 lo tiene que insertar en el html, sino sigue recorriendo hasta encontrarlo
 */
-
-

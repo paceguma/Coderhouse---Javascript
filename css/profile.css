@@ -459,7 +459,19 @@ hr {
   margin-top: 8px;
 
 }
-
+.gym-class {
+  transition: 0.55s;
+  width: 190px;
+  height: 50px;
+  /* border: .02px solid var(--turquoiseColor); */
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: .1rem;
+  color: var(--wordsColors);
+  display: flex;
+  align-items: center;
+  margin: 8px 16px 8px 0;
+}
 .gym-hour {
   width: 120px;
   height: 50px;
@@ -476,36 +488,58 @@ hr {
 
 .gym-class-onclick-power-stretching{
   background-color: var(--violetColor)
+  
 }
 .gym-class-onclick-abs{
-  background-color: var(--redOrangeColor)
+  background-color: var(--redOrangeColor);
+  color: var(--backGroundColor);
 }
 .gym-class-onclick-step{
   background-color: var(--pinkColor)
 }
 .gym-class-onclick-zumba{
-  background-color: var(--turquoiseColor)
+  background-color: var(--turquoiseColor);
+  color: var(--backGroundColor);
 }
 .gym-class-onclick-cardio{
-  background-color: var(--greyColor)
+  background-color: var(--greyColor);
+  color: var(--backGroundColor);
 }
+
 .gym-class-onclick-aerobox{
-  background-color: var(--greenColor)
+  background-color: var(--greenColor);
+  color: var(--backGroundColor);
+}
+
+.slide-cardio:hover {
+  box-shadow: inset 10.5em 0 0 0 var(--greyColor);
+  color: var(--backgroundColorLight);
+}
+
+.slide-abs:hover {
+  box-shadow: inset 10.5em 0 0 0 var(--redOrangeColor);
+  color: var(--backgroundColorLight);
+}
+
+.slide-power-stretching:hover {
+  box-shadow: inset 10.5em 0 0 0 var(--violetColor);
+}
+
+.slide-step:hover {
+  box-shadow: inset 10.5em 0 0 0 var(--pinkColor);
+}
+
+.slide-zumba:hover {
+  box-shadow: inset 10.5em 0 0 0 var(--turquoiseColor);
+  color: var(--backgroundColorLight);
+}
+
+.slide-aerobox:hover {
+  box-shadow: inset 10.5em 0 0 0 var(--greenColor);
+  color: var(--backgroundColorLight);
 }
 
 
-.gym-class {
-  width: 190px;
-  height: 50px;
-  /* border: .02px solid var(--turquoiseColor); */
-  text-transform: uppercase;
-  font-size: 18px;
-  letter-spacing: .1rem;
-  color: var(--wordsColors);
-  display: flex;
-  align-items: center;
-  margin: 8px 16px 8px 0;
-}
 
 .container {
   display: flex;
@@ -737,3 +771,15 @@ footer {
 .letraDelPlan {
   font-size: 24px;
 }
+
+
+
+.widthDiv {
+  width: 70px;
+  
+}
+
+.container-class {
+  display: flex;
+}
+

@@ -1,24 +1,25 @@
-{
-    "professor": [
-        {
-            "name": "Andrea",
-            "age": 22,
-            "biography": "Now, I studies at university, my parents are gym's professor so I love it"
-        },
-        {
-            "name": "Natalia",
-            "age": 25,
-            "biography": "I studied Natural Science but I love training during all my live, now I share my knowleadge"
-        },
-        {
-            "name": "Eugenia",
-            "age": 28,
-            "biography": "I am a gym teacher, I have worked in gyms for 6 years. I studied at Profesorado de Gimnasia during 4 years."
-        }
-    ]
-}
+
 
 {
+    
+        "professor": [
+            {
+                "name": "Andrea",
+                "age": 22,
+                "biography": "Now, I studies at university, my parents are gym's professor so I love it"
+            },
+            {
+                "name": "Natalia",
+                "age": 25,
+                "biography": "I studied Natural Science but I love training during all my live, now I share my knowleadge"
+            },
+            {
+                "name": "Eugenia",
+                "age": 28,
+                "biography": "I am a gym teacher, I have worked in gyms for 6 years. I studied at Profesorado de Gimnasia during 4 years."
+            }
+        ],
+    
     "activities": [
         {
             "name": "zumba",
